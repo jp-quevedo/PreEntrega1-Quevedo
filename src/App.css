@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: WorkSans, helvetica, sans-serif;
 }
 
 .App-logo {
@@ -36,3 +37,8 @@
     transform: rotate(360deg);
   }
 }
+
+/*
+border-radius: 0.5rem
+renderizado imagen tarjetas 160x160
+*/

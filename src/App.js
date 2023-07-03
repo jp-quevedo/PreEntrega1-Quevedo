@@ -15,42 +15,42 @@ function App() {
       <Products 
         img="./assets/candelero-blanco.avif"
         title="Candelero Blanco"
-        price={9.99}
+        price={9990}
       />
       <Products 
         img="./assets/candelero-negro.avif"
         title="Candelero Negro"
-        price={13.99}
+        price={13990}
       />
       <Products 
         img="./assets/espejo-cuadrado.avif"
         title="Espejo Cuadrado"
-        price={80.99}
+        price={80990}
       />
       <Products 
         img="./assets/espejo-redondo.avif"
         title="Espejo Redondo"
-        price={65.99}
+        price={65990}
       />
       <Products 
         img="./assets/marco-grande.avif"
         title="Marco Grande"
-        price={9.99}
+        price={9990}
       />
       <Products 
         img="./assets/marco-pequeño.avif"
         title="Marco Pequeño"
-        price={7.99}
+        price={7990}
       />
       <Products 
         img="./assets/planta-colgante.avif"
         title="Planta Colgante"
-        price={4.99}
+        price={4990}
       />
       <Products 
         img="./assets/planta-macetero.avif"
         title="Planta de Macetero"
-        price={6.99}
+        price={6990}
       />
       </div>
     </div>

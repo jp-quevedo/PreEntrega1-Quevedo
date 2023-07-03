@@ -1,0 +1,9 @@
+.carticon {
+    width: 5%;
+}
+
+.cart {
+    position: absolute;
+    right: 1.5em;
+    padding: 1.25em;
+}

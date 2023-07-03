@@ -13,10 +13,5 @@
     position: absolute;
     left: 0.4em;
     padding: 0.25em;
-}
-
-.cart {
-    position: absolute;
-    right: 1.5em;
-    padding: 1.25em;
+    font-weight: bold;
 }

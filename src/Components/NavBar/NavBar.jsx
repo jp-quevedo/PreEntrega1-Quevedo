@@ -9,10 +9,11 @@ function NavBar(){
             <br />
             <br />
             <br />
-            <button className="btn">CANDELEROS</button>
-            <button className="btn">ESPEJOS</button>
-            <button className="btn">MARCOS</button>
-            <button className="btn">PLANTAS</button>
+            <button className="btn">Candeleros</button>
+            <button className="btn">Espejos</button>
+            <button className="btn">Marcos</button>
+            <button className="btn">Plantas</button>
+            <button className="btn">Ver Todo</button>
         </nav>  
     )
 }

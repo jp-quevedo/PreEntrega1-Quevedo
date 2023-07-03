@@ -1,0 +1,22 @@
+.btn {
+    padding: 5px 15px;
+    margin: 5px 15px;
+    color: rgb(35, 35, 35);
+    cursor: pointer;
+}
+
+.btn:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    position: absolute;
+    left: 0.4em;
+    padding: 0.25em;
+}
+
+.cart {
+    position: absolute;
+    right: 1.5em;
+    padding: 1.25em;
+}

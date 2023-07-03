@@ -1,7 +1,7 @@
-const ItemListContainer = ({ greeting }) => {
+function ItemListContainer({ greeting }){
     return (
         <div>
-            <h3>{greeting}</h3>
+            <h4 className="texto">{greeting}</h4>
         </div>
     )
 }

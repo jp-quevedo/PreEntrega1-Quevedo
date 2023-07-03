@@ -1,8 +1,8 @@
-const CartWidget = () => {
+function CartWidget(){
     return (
-        <nav>
+        <nav className="cart">
             <img src="/assets/carrito.png" alt="carrito"></img>
-            <h6>0</h6>
+            <h8> 0</h8>
         </nav>  
     )
 }

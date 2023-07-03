@@ -1,0 +1,21 @@
+body {margin:25px;}
+
+.card {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(234, 238, 234);
+    margin: 1em;
+}
+
+.img{
+    border-radius: 5px 5px 0px 0px;
+}
+
+.btn {
+    color: rgb(35, 35, 35);
+    cursor: pointer;
+}
+
+.btn:hover {
+    text-decoration: underline;
+}

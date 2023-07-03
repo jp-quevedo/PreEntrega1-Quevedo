@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  font-family: WorkSans, helvetica, sans-serif;
 }
 
 .App-logo {
@@ -38,7 +37,11 @@
   }
 }
 
-/*
-border-radius: 0.5rem
-renderizado imagen tarjetas 160x160
-*/
+.container {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

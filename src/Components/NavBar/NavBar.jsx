@@ -1,14 +1,18 @@
+import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget"
 
-
-const NavBar = () => {
+function NavBar(){
     return (
         <nav>
-            <img src="/assets/logo.png" alt="logo"></img>
-            <button>Cocina</button>
-            <button>Dormitorio</button>
-            <button>Living</button>
+            <h1 className="logo">Clever Décor</h1>
             <CartWidget />
+            <br />
+            <br />
+            <br />
+            <button className="btn">CANDELEROS</button>
+            <button className="btn">ESPEJOS</button>
+            <button className="btn">MARCOS</button>
+            <button className="btn">PLANTAS</button>
         </nav>  
     )
 }

@@ -1,9 +1,13 @@
 .carticon {
-    width: 5%;
+    width: 25px;
 }
 
 .cart {
     position: absolute;
-    right: 1.5em;
+    right: 1.25em;
     padding: 1.25em;
+}
+
+p {
+    font-size: 0.75em;
 }

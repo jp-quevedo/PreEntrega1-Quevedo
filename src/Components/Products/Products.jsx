@@ -6,8 +6,8 @@ function Products(props){
         <div className="container">
             <div className="card">
                 <img className="card-img" alt="product" src={img}/>
-                <p>{title}</p>
-                <p>$ {price}</p>
+                <h6>{title}</h6>
+                <h6>$ {price}</h6>
                 <button className="btn">Ver Detalle</button>
             </div>
         </div>

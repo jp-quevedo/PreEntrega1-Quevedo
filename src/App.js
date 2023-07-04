@@ -11,6 +11,8 @@ function App() {
         <NavBar />
         <ItemListContainer greeting={`Bienvenido a mi pre-entrega nº1 de React`}/>
       </header>
+      <br />
+      <br />
       <div className="container">
         <Products 
           img="./assets/candelero-blanco.avif"
@@ -52,7 +54,7 @@ function App() {
           title="Planta de Macetero"
           price={6990}
         />
-      </div>
+        </div>
     </div>
   );
 }

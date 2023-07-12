@@ -7,13 +7,15 @@ import ItemCount from './Components/ItemCount/ItemCount';
 function App() {
   return (
     <div className="App">
-      <div className="header">
+      <header className="header">
         <NavBar/>
-      </div>
-      <div className="container">
+      </header>
+      <main className="container">
         <ItemListContainer greeting={`Bienvenido a mi pre-entrega nº2 de React`}/> 
-      </div>
-      <ItemCount initial={1} stock={16} onAdd={(quantity) => console.log('Cantidad agregada: ',quantity)}/>
+      </main>
+      <footer>
+        <ItemCount initial={1} stock={16} onAdd={(quantity) => console.log('Cantidad agregada: ',quantity)}/>
+      </footer>
     </div>
   );
 }

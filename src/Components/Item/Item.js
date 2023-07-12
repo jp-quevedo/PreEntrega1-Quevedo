@@ -8,6 +8,7 @@ const Item =({id, name, img, price, stock}) => {
                 <img src={img} alt={name} className="card-img"/>
             </picture>
             <section>
+                <br/>
                 <h5>{name}</h5>
                 <h6>Precio: ${price}</h6>
                 <p>Stock disponible: {stock}</p>

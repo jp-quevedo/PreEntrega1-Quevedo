@@ -1,0 +1,21 @@
+.counter {
+    width: 180px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:rgb(35, 35, 35);
+    margin: 1em;    
+    border-radius: 5px;
+    padding: 1em;
+    color: rgb(234, 238, 234);
+    display: inline-block;
+}
+
+.selectingbox {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.selectors {
+    border-radius: 5px;
+    border-color: rgb(234, 238, 234) ;
+}

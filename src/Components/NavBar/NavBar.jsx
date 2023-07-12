@@ -5,8 +5,7 @@ function NavBar(){
     return (
         <nav>
             <div className="navBar">
-            <h1 className="logo">Clever Décor</h1>
-            <CartWidget />
+            <h2 className="logo">Clever Décor</h2>
                 <div>
                     <button className="btn">Candeleros</button>
                     <button className="btn">Espejos</button>
@@ -14,6 +13,7 @@ function NavBar(){
                     <button className="btn">Plantas</button>
                     <button className="btn">Ver Todo</button>
                 </div>
+                <CartWidget/>
             </div>
         </nav>  
     )

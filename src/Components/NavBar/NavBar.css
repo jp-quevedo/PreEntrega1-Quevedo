@@ -10,14 +10,18 @@
 }
 
 .logo {
-    left: 0.4em;
-    padding: 0.25em;
+    display: block;
     font-weight: bold;
+    padding-left: 0.5em;
+    margin-bottom: 0px;
 }
 
 .navBar {
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    
 }

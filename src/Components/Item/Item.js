@@ -1,4 +1,4 @@
-import "./Item.css";
+import "./Item.css"
 
 const Item =({id, name, img, price, stock}) => {
 

@@ -1,6 +1,6 @@
 const products = [
     {
-        id: '1',
+        id: 1,
         name: 'Candelero Blanco',
         price: 9990,
         category: 'candeleros',
@@ -9,7 +9,7 @@ const products = [
         description: 'Medidas 30x30cm',
     },
     {
-        id: '2',
+        id: 2,
         name: 'Candelero Negro',
         price: 13990,
         category: 'candeleros',
@@ -18,7 +18,7 @@ const products = [
         description: 'Medidas 25x25cm',
     },
     {
-        id: '3',
+        id: 3,
         name: 'Espejo Cuadrado',
         price: 80990,
         category: 'espejos',
@@ -27,7 +27,7 @@ const products = [
         description: 'Medidas 40x80cm',
     },
     {
-        id: '4',
+        id: 4,
         name: 'Espejo Redondo',
         price: 65990,
         category: 'espejos',
@@ -36,7 +36,7 @@ const products = [
         description: 'Medidas 40x40cm',
     },
     {
-        id: '5',
+        id: 5,
         name: 'Marco Grande',
         price: 9990,
         category: 'marcos',
@@ -45,7 +45,7 @@ const products = [
         description: 'Tamaño A4',
     },
     {
-        id: '6',
+        id: 6,
         name: 'Marco Pequeño',
         price: 7990,
         category: 'marcos',
@@ -54,7 +54,7 @@ const products = [
         description: 'Tamaño Retrato',
     },
     {
-        id: '7',
+        id: 7,
         name: 'Planta Colgante',
         price: 4990,
         category: 'plantas',
@@ -63,7 +63,7 @@ const products = [
         description: 'Kokedama Artificial',
     },
     {
-        id: '8',
+        id: 8,
         name: 'Planta de Macetero',
         price: 6990,
         category: 'plantas',
@@ -77,6 +77,6 @@ export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
-        }, 500)
+        }, 1500)
     })
 }

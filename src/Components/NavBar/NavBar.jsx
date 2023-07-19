@@ -1,5 +1,5 @@
-import "./NavBar.css";
-import CartWidget from "../CartWidget/CartWidget"
+import './NavBar.css';
+import CartWidget from '../CartWidget/CartWidget';
 
 function NavBar(){
     return (
@@ -18,4 +18,5 @@ function NavBar(){
         </nav>  
     )
 }
+
 export default NavBar

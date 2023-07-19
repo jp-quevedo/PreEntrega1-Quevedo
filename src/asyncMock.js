@@ -1,4 +1,4 @@
-const products = [
+const items = [
     {
         id: 1,
         name: 'Candelero Blanco',
@@ -73,10 +73,18 @@ const products = [
     },
 ]
 
-export const getProducts = () => {
+export const getItems = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(products)
-        }, 1500)
+            resolve(items)
+        }, 2000)
+    })
+}
+
+export const getItem = (itemId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(items.find(item => item.id === itemId))
+        }, 2000)
     })
 }

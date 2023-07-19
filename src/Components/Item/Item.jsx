@@ -1,4 +1,4 @@
-import "./Item.css"
+import './Item.css';
 
 const Item =({id, name, img, price, stock}) => {
 
@@ -11,7 +11,6 @@ const Item =({id, name, img, price, stock}) => {
                 <br/>
                 <h5>{name}</h5>
                 <h6>Precio: ${price}</h6>
-                <p>Stock disponible: {stock}</p>
             </section>
             <footer>
                 <button className ="btn">Ver Detalle</button>

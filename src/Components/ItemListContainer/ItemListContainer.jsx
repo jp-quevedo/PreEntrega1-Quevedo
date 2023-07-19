@@ -1,17 +1,17 @@
-import React from "react"
-import { useState, useEffect } from "react"
-import { getProducts } from "../../asyncMock"
-import ItemList from "../ItemList/ItemList"
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { getItems } from '../../asyncMock';
+import ItemList from '../ItemList/ItemList';
 
 function ItemListContainer({ greeting }){
-    console.log("Renderizando items del List Container")
-    const [products , setProducts] = useState ([])
+    console.log("Renderizando Items del List Container")
+    const [items , setItems] = useState ([])
     
     /*
     useEffect(() => {
-       getProducts()
+       getItems()
             .then(response => {
-                setProducts(response)
+                setItems(response)
             })
             .catch(error => {
                 console.error(error)
@@ -19,22 +19,22 @@ function ItemListContainer({ greeting }){
     }, [])
     */
 
-    async function requestProducts() {
-        const respuesta = await getProducts();
-        setProducts(respuesta);
+    async function requestItems() {
+        const response = await getItems();
+        setItems(response);
     }
     
     useEffect(() => {
         console.log("Montaje Item List Container")
-        requestProducts();
+        requestItems();
     }, []);
 
-    return (
+    return(
         <div>
             <h4 className="texto">{greeting}</h4>
-            <ItemList products={products}/>
+            <ItemList items={items}/>
         </div>
     )
 }
-export default ItemListContainer
 
+export default ItemListContainer

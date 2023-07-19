@@ -1,4 +1,4 @@
-import "./CartWidget.css"
+import './CartWidget.css';
 
 function CartWidget(){
     return (
@@ -10,4 +10,5 @@ function CartWidget(){
         </div>  
     )
 }
+
 export default CartWidget

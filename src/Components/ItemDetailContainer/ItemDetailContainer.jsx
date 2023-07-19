@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { getItem } from '../../asyncMock';
+import ItemDetail from '../ItemDetail/ItemDetail'
 
 function ItemDetailContainer() {
     console.log("Renderizando Item")
@@ -17,7 +18,9 @@ function ItemDetailContainer() {
     }, [])
 
     return(
-        <div></div>
+        <div>
+            <ItemDetail {...item} />
+        </div>
     )
 }
 

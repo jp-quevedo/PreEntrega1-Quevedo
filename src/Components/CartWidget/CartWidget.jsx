@@ -1,7 +1,7 @@
 import './CartWidget.css';
 
 function CartWidget(){
-    return (
+    return(
         <div className="cart">
             <p>
                 <img className="carticon" src="/assets/carrito.svg" alt="carrito"></img>

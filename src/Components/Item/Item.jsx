@@ -1,8 +1,8 @@
 import './Item.css';
 
-const Item =({id, name, img, price, stock}) => {
+const Item = ({id, name, img, price, stock}) => {
 
-    return (
+    return(
         <article className="card">
             <picture>
                 <img src={img} alt={name} className="card-img"/>

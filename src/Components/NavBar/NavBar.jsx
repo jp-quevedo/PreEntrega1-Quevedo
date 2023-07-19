@@ -2,7 +2,7 @@ import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
 
 function NavBar(){
-    return (
+    return(
         <nav>
             <div className="navBar">
             <h2 className="logo">Clever Décor</h2>
@@ -13,7 +13,7 @@ function NavBar(){
                     <button className="btn">Plantas</button>
                     <button className="btn">Ver Todo</button>
                 </div>
-                <CartWidget/>
+                <CartWidget />
             </div>
         </nav>  
     )

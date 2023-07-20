@@ -1,11 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { getItems } from '../../asyncMock';
+import { getItems, getCategoryItem } from '../../asyncMock';
 import ItemList from '../ItemList/ItemList';
+import { useParams } from 'react-router-dom';
 
 function ItemListContainer({ greeting }){
-    console.log("Renderizando Items del List Container")
-    const [items , setItems] = useState ([])
+    console.log("Renderizando Items del List Container");
+    const [items , setItems] = useState ([]);
+
+    const { categoryId } = useParams();
     
     /*
     useEffect(() => {
@@ -20,12 +23,23 @@ function ItemListContainer({ greeting }){
     */
 
     async function requestItems() {
-        const response = await getItems();
+
+        /*
+        let response = [];
+        if (categoryId === undefined) {
+            response = await getItems();
+        }
+        else {
+            response = await getItems(categoryId);
+        }
+        */
+
+        let response = categoryId? await getCategoryItem(categoryId) : await getItems();
         setItems(response);
     }
     
     useEffect(() => {
-        console.log("Montaje Item List Container")
+        console.log("Montaje Item List Container");
         requestItems();
     }, []);
 

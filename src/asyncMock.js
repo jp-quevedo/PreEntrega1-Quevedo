@@ -81,10 +81,18 @@ export const getItems = () => {
     })
 }
 
-export const getItem = (itemId) => {
+export const getCategoryItem = (categoryId) => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(items.find(item => item.id === itemId))
+            resolve(items.filter(item => {return( item.category.toLowerCase() === categoryId.toLowerCase() )}))
+        })
+        }, 2000)
+}
+
+export const getItem = (itemId) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(items.find(item => item.id == parseInt(itemId)))
         }, 2000)
     })
 }

@@ -14,10 +14,17 @@
 }
 
 .btn {
+    padding: 5px 15px;
+    margin: 5px 15px;
     color: rgb(35, 35, 35);
     cursor: pointer;
 }
 
 .btn:hover {
     text-decoration: underline;
+    color: rgb(35, 35, 35);
+}
+
+.btn:active {
+    color: rgb(35, 35, 35);
 }

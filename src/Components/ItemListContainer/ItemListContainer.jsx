@@ -41,7 +41,7 @@ function ItemListContainer({ greeting }){
     useEffect(() => {
         console.log("Montaje Item List Container");
         requestItems();
-    }, []);
+    }, [categoryId]);
 
     return(
         <div>

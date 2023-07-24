@@ -15,7 +15,7 @@ const ItemDetail = ({id, name, price, category, img, stock, description,}) => {
                 <h6>Stock: {stock}</h6>
             </section>
             <footer>
-                <ItemCount initial={1} stock={16} onAdd={(quantity) => console.log('Cantidad agregada: ',quantity)} />
+                <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log('Cantidad agregada: ',quantity)} />
             </footer>
         </article>
     )

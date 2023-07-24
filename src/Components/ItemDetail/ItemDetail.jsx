@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ItemDetail = ({id, name, price, category, img, stock, description}) => {
 
-    function handleAddToCart(){
-        alert(`Agregaste ${name} al carrito`);
-    }
+    function handleAddToCart(){}
 
     return(
         <article className="detailcard">
@@ -21,11 +19,7 @@ const ItemDetail = ({id, name, price, category, img, stock, description}) => {
                 <h6>Stock: {stock}</h6>
             </section>
             <footer>
-                <ItemCount 
-                    stock={stock}
-                    onAddToCart={handleAddToCart}
-                    onAdd={(quantity) => console.log('Cantidad agregada: ',quantity)}
-                />
+                <ItemCount stock={stock} onAddToCart={handleAddToCart} />
                 <Link to='/' className="btn">Volver al Inicio</Link>
             </footer>
         </article>

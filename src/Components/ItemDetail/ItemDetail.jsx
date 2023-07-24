@@ -1,7 +1,13 @@
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
 
-const ItemDetail = ({id, name, price, category, img, stock, description,}) => {
+const ItemDetail = ({id, name, price, category, img, stock, description}) => {
+
+    function handleAddToCart(){
+        alert(`Agregaste ${name} al carrito`);
+    }
+
     return(
         <article className="detailcard">
             <picture>
@@ -15,7 +21,12 @@ const ItemDetail = ({id, name, price, category, img, stock, description,}) => {
                 <h6>Stock: {stock}</h6>
             </section>
             <footer>
-                <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log('Cantidad agregada: ',quantity)} />
+                <ItemCount 
+                    stock={stock}
+                    onAddToCart={handleAddToCart}
+                    onAdd={(quantity) => console.log('Cantidad agregada: ',quantity)}
+                />
+                <Link to='/' className="btn">Volver al Inicio</Link>
             </footer>
         </article>
     )

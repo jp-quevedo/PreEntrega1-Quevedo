@@ -5,7 +5,7 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 
 function ItemDetailContainer() {
-    console.log("Renderizando Item");
+    //console.log("Renderizando Item");
     const [item , setItem] = useState ([]);
 
     const { itemId } = useParams();
@@ -16,7 +16,7 @@ function ItemDetailContainer() {
     }
 
     useEffect(() => {
-        console.log("Montaje Item");
+        //console.log("Montaje Item");
         requestItem();
     }, [])
 

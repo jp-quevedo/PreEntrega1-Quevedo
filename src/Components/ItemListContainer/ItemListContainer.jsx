@@ -5,7 +5,7 @@ import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 
 function ItemListContainer({ greeting }){
-    console.log("Renderizando Items del List Container");
+    //console.log("Renderizando Items del List Container");
     const [items , setItems] = useState ([]);
 
     const { categoryId } = useParams();
@@ -39,7 +39,7 @@ function ItemListContainer({ greeting }){
     }
     
     useEffect(() => {
-        console.log("Montaje Item List Container");
+        //console.log("Montaje Item List Container");
         requestItems();
     }, [categoryId]);
 

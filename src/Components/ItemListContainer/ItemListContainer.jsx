@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { getItems, getCategoryItem } from '../../asyncMock';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import Loader from '../Loader/Loader'
+import Loader from '../Loader/Loader';
+import './ItemListContainer.css';
 
 function ItemListContainer({ greeting }){
     const [items , setItems] = useState([]);
@@ -29,8 +30,8 @@ function ItemListContainer({ greeting }){
     }
 
     return(
-        <div>
-            <h4 className="texto">{greeting}</h4>
+        <div className="anuncio">
+            <h4>{greeting}</h4>
             <ItemList items={items}/>
         </div>
     )

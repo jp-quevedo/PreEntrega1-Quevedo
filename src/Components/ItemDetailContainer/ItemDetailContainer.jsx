@@ -3,19 +3,28 @@ import { useState, useEffect } from 'react';
 import { getItem } from '../../asyncMock';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
+import Loader from '../Loader/Loader';
 
 function ItemDetailContainer() {
     const [item , setItem] = useState([]);
+    const [itemIsLoading , setItemIsLoading] = useState(true);
     const { itemId } = useParams();
 
-    async function requestItem(){
-        const response = await getItem(itemId);
-        setItem(response);
-    }
-
     useEffect(() => {
+        setItemIsLoading(true);
+        async function requestItem(){
+            const response = await getItem(itemId);
+            setItem(response);
+            setItemIsLoading(false);
+        }
         requestItem();
     }, [])
+
+    if (itemIsLoading){
+        return(
+            <Loader />
+        )
+    }
 
     return(
         <div>

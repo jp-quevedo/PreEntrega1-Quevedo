@@ -5,9 +5,7 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 
 function ItemDetailContainer() {
-    //console.log("Renderizando Item");
-    const [item , setItem] = useState ([]);
-
+    const [item , setItem] = useState([]);
     const { itemId } = useParams();
 
     async function requestItem(){
@@ -16,7 +14,6 @@ function ItemDetailContainer() {
     }
 
     useEffect(() => {
-        //console.log("Montaje Item");
         requestItem();
     }, [])
 

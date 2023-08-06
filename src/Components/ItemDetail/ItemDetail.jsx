@@ -7,7 +7,7 @@ import { cartContext } from '../../Context/CartContext';
 const ItemDetail = ({id, name, price, category, img, stock, description}) => {
 
     const [quantityAdded, setQuantityAdded] = useState(0)
-
+    const [isAddedToCart , setIsAddedToCart] = useState(false);
     const { addItem } = useContext(cartContext)
 
     const handleAddToCart = (quantity) => {
@@ -18,6 +18,7 @@ const ItemDetail = ({id, name, price, category, img, stock, description}) => {
         }
 
         addItem(item, quantity)
+        setIsAddedToCart(true);
     }
 
     return(
@@ -33,7 +34,11 @@ const ItemDetail = ({id, name, price, category, img, stock, description}) => {
                 <h6>Stock: {stock}</h6>
             </section>
             <footer>
-                <ItemCount stock={stock} onAddToCart={handleAddToCart} />
+                {
+                    isAddedToCart
+                    ? <button>Ir al Carrito</button>
+                    : <ItemCount stock={stock} onAddToCart={handleAddToCart} />
+                }
                 <Link to='/' className="btn">Volver al Inicio</Link>
             </footer>
         </article>

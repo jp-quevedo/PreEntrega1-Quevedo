@@ -3,45 +3,30 @@ import { useState, useEffect } from 'react';
 import { getItems, getCategoryItem } from '../../asyncMock';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+import Loader from '../Loader/Loader'
 
 function ItemListContainer({ greeting }){
-    //console.log("Renderizando Items del List Container");
-    const [items , setItems] = useState ([]);
-
+    const [items , setItems] = useState([]);
+    const [isLoading , setIsLoading] = useState(true);
     const { categoryId } = useParams();
-    
-    /*
+
     useEffect(() => {
-       getItems()
-            .then(response => {
-                setItems(response)
-            })
-            .catch(error => {
-                console.error(error)
-            })
-    }, [])
-    */
-
-    async function requestItems() {
-
-        /*
-        let response = [];
-        if (categoryId === undefined) {
-            response = await getItems();
+        setIsLoading(true);
+        async function requestItems() {
+            let response = categoryId
+                ? await getCategoryItem(categoryId)
+                : await getItems();
+            setItems(response);
+            setIsLoading(false);
         }
-        else {
-            response = await getItems(categoryId);
-        }
-        */
-
-        let response = categoryId? await getCategoryItem(categoryId) : await getItems();
-        setItems(response);
-    }
-    
-    useEffect(() => {
-        //console.log("Montaje Item List Container");
         requestItems();
     }, [categoryId]);
+
+    if (isLoading) {
+        return(
+            <Loader />
+        );
+    }
 
     return(
         <div>

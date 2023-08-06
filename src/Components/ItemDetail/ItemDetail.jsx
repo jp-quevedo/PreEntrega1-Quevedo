@@ -36,7 +36,7 @@ const ItemDetail = ({id, name, price, category, img, stock, description}) => {
             <footer>
                 {
                     isAddedToCart
-                    ? <button>Ir al Carrito</button>
+                    ? <Link to='/cart' className="btn">Ir al Carrito</Link>
                     : <ItemCount stock={stock} onAddToCart={handleAddToCart} />
                 }
                 <Link to='/' className="btn">Volver al Inicio</Link>

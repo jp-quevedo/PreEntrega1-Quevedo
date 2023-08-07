@@ -18,7 +18,6 @@ const ItemCount = ({stock, onAddToCart}) => {
 
     function handleConfirm(){
         onAddToCart(quantity)
-        console.log('Cantidad agregada: ',quantity)
         alert(`Agregaste ${quantity} unidades al carrito`);
     }
 

@@ -32,7 +32,7 @@ const items = [
         price: 65990,
         category: 'espejos',
         img: '/assets/espejo-redondo.avif',
-        stock: '6',
+        stock: 6,
         description: 'Medidas 40x40cm',
     },
     {

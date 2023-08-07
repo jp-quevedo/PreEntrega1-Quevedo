@@ -21,6 +21,10 @@ const ItemDetail = ({id, name, price, category, img, stock, description}) => {
         setIsAddedToCart(true);
     }
 
+    const stockStyle = {
+        color: stock>=5? "green": "red"
+    }
+
     return(
         <article className="detailcard">
             <picture>
@@ -31,7 +35,7 @@ const ItemDetail = ({id, name, price, category, img, stock, description}) => {
                 <h5>{name}</h5>
                 <h6>Precio: ${price}</h6>
                 <h6>Descripción: {description}</h6>
-                <h6>Stock: {stock}</h6>
+                <h6 style={stockStyle}>Stock: {stock}</h6>
             </section>
             <footer>
                 {

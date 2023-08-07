@@ -1,13 +1,18 @@
+import { useContext } from 'react';
+import { cartContext } from '../../Context/CartContext';
 import './CartWidget.css';
+import { Link } from 'react-router-dom';
 
-function CartWidget(){
+const CartWidget = () => {
+    const countContext = useContext(cartContext)
+
     return(
-        <div className="cart">
-            <p>
-                <img className="carticon" src="/assets/carrito.svg" alt="carrito"></img>
-                0
-            </p>
-        </div>  
+        <Link to='/cart' className="btn">
+            <div className="cart">
+                <img className="cart-icon" src="/assets/carrito.svg" alt="carrito"></img>
+                <p style={{ display: countContext.getTotalItemsInCart() > 0 ? 'block' : 'none' }}> {countContext.getTotalItemsInCart()} </p>
+            </div>
+        </Link> 
     )
 }
 

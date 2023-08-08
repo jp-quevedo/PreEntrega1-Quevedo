@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './ItemCount.css';
+import Swal from 'sweetalert2';
 
 const ItemCount = ({stock, onAddToCart}) => {
     const [quantity, setQuantity] = useState(1)
@@ -18,7 +19,13 @@ const ItemCount = ({stock, onAddToCart}) => {
 
     function handleConfirm(){
         onAddToCart(quantity)
-        alert(`Agregaste ${quantity} unidades al carrito`);
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: `Agregaste ${quantity} unidad(es) al carrito`,
+            showConfirmButton: false,
+            timer: 1500
+          });
     }
 
     return(

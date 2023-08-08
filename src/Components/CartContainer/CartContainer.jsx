@@ -4,8 +4,17 @@ import { cartContext } from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
 import './CartContainer.css';
 
-function CartContainer() {
-    const { cart, removeItem, clearCart } = useContext(cartContext)
+const CartContainer = () => {
+    const { cart, removeItem, clearCart, getTotalItemsInCart, getTotalPriceInCart } = useContext(cartContext)
+
+    if(getTotalItemsInCart === '0') {
+        return (
+            <div>
+                <h2>No hay items en la bolsa</h2>
+                <Link to='/' className="detail-btn">Seguir Comprando</Link>
+            </div>
+        )
+    }
 
     return (
         <div className="cart-container">
@@ -35,6 +44,12 @@ function CartContainer() {
                         </tr>
                     </table>
                 ))}
+                <div className="eliminar-bolsa"><button onClick={() => clearCart()} className="eliminar-bolsa-btn">Vaciar Bolsa</button></div>
+                <table>
+                    <tr className="tabla">Subtotal: ${getTotalPriceInCart}</tr>
+                    <tr className="tabla">Costo de Envío: ${getTotalPriceInCart * 0.05}</tr>
+                    <tr className="tabla">Total de la Compra: ${}</tr>
+                </table>
             </div>
         </div>
     )

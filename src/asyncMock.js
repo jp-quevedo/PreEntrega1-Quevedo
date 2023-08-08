@@ -20,7 +20,7 @@ const items = [
     {
         id: 3,
         name: 'Espejo Cuadrado',
-        price: 80990,
+        price: 79990,
         category: 'espejos',
         img: '/assets/espejo-cuadrado.avif',
         stock: 8,

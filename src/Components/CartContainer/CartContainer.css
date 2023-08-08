@@ -45,3 +45,22 @@ h2 {
     border: 1px solid red;
     border-radius: 5px;
 }
+
+.eliminar-bolsa {
+    width: fit-content;
+    padding-bottom: 16px;
+}
+
+.eliminar-bolsa-btn {
+    border: 0px;
+    background-color: white;
+    cursor: pointer;
+    padding: 0px;
+    font-size: 1em;
+}
+
+.eliminar-bolsa-btn:hover {
+    padding: 4px 6px 0px 6px;
+    border: 1px solid red;
+    border-radius: 5px;
+}

@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react';
+import Swal from 'sweetalert2';
 
 export const cartContext = createContext({ cart: [] })
 
@@ -10,12 +11,56 @@ export const CartProvider = ({ children }) => {
     }
 
     const removeItem = (itemId) => {
-        const cartUpdated = cart.filter(item => item.id !== itemId)
-        setCart(cartUpdated)
+        Swal.fire({
+            title: 'Estás seguro?',
+            text: "No podrás revertir esta acción!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: 'red',
+            cancelButtonColor: 'gray',
+            confirmButtonText: 'Eliminar',
+            cancelButtonText: 'Cancelar',
+          }).then((result) => {
+            if (result.isConfirmed) {
+                const cartUpdated = cart.filter(item => item.id !== itemId)
+                setCart(cartUpdated)
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Eliminado!',
+                    showConfirmButton: false,
+                    timer: 1500,
+                })
+            }
+            else {
+                setCart([...cart])
+            }
+        })
     }
 
     const clearCart = () => {
-        setCart([])
+        Swal.fire({
+            title: 'Estás seguro?',
+            text: "No podrás revertir esta acción!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: 'red',
+            cancelButtonColor: 'gray',
+            confirmButtonText: 'Vaciar Bolsa',
+            cancelButtonText: 'Cancelar',
+          }).then((result) => {
+            if (result.isConfirmed) {
+                setCart([])
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Bolsa Vaciada!',
+                    showConfirmButton: false,
+                    timer: 1500,
+                })
+            }
+            else {
+                setCart([...cart])
+            }
+        })
     }
 
     const isInCart = (itemId) => {

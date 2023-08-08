@@ -9,13 +9,12 @@ const Item = ({id, name, img, price, stock}) => {
                 <img src={img} alt={name} className="card-img"/>
             </picture>
             <section>
-                <br/>
-                <h5>{name}</h5>
-                <h6>Precio: ${price}</h6>
+                <p className="card-title">{name}</p>
+                <p className="card-text">Precio: ${price}</p>
             </section>
             <footer>
                 <Link to={`/item/${id}`}>
-                    <button className ="btn">Ver Detalle</button>
+                    <button className ="detail-btn">Ver Detalle</button>
                 </Link>
             </footer>
         </article>

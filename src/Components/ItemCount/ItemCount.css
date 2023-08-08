@@ -2,9 +2,9 @@
     width: 180px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color:rgb(35, 35, 35);
-    margin: 1em;    
+    margin: 15px;    
     border-radius: 5px;
-    padding: 1em;
+    padding: 15px;
     color: rgb(234, 238, 234);
     display: inline-block;
 }
@@ -16,6 +16,43 @@
 }
 
 .selectors {
+    width: 25px;
+    height: 25px;
     border-radius: 5px;
-    border-color: rgb(234, 238, 234) ;
+    border-color: rgb(234, 238, 234);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.adder {
+    width: 180px;
+    font-size: 1.25em;
+    border-radius: 5px;
+    border-color: rgb(234, 238, 234);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px ;
+}
+
+.selectors:hover {
+    text-decoration: underline;
+}
+
+.selectors:active {
+    color: rgb(35, 35, 35);
+}
+
+.adder:hover {
+    text-decoration: underline;
+}
+
+.adder:active {
+    color: rgb(35, 35, 35);
+}
+
+h3 {
+    margin: 0px;
+    height: 25px;
 }

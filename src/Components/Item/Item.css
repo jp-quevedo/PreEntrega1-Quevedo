@@ -3,6 +3,8 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: rgb(234, 238, 234);
     margin: 1em;
+    border-radius: 0px 0px 5px 5px ;
+    
 }
 
 .card:hover {
@@ -11,20 +13,38 @@
 
 .card-img{
     border-radius: 5px 5px 0px 0px;
+    width: 250px;
 }
 
-.btn {
+.detail-btn {
+    border: 1px solid;
+    border-radius: 5px;
     padding: 5px 15px;
-    margin: 5px 15px;
     color: rgb(35, 35, 35);
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.btn:hover {
+.detail-btn:hover {
     text-decoration: underline;
+}
+
+.detail-btn:active {
     color: rgb(35, 35, 35);
 }
 
-.btn:active {
-    color: rgb(35, 35, 35);
+.card-title {
+    font-weight: bold;
+    font-size: 1em;
+    padding: 5px;
+}
+
+.card-text {
+    font-size: 1em;
+    padding: 5px;
+}
+
+footer {
+    padding-bottom: 15px;
 }

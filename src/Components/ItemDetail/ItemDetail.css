@@ -1,12 +1,46 @@
 .detailcard {
     width: 320px;
+    height: fit-content;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: rgb(234, 238, 234);
-    margin: 1em;
+    margin-top: 99px;
     border-radius: 5px;
 }
 
-.detailcard-img{
+.detailcard-img {
     border-radius: 5px 5px 0px 0px;
     width: 320px;
+}
+
+.detail-btn {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 5px 15px;
+    color: rgb(35, 35, 35);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.detail-btn:hover {
+    text-decoration: underline;
+}
+
+.detail-btn:active {
+    color: rgb(35, 35, 35);
+}
+
+footer {
+    padding-bottom: 15px;
+}
+
+.detailcard-title {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.detailcard-text {
+    font-size: 1em;
+    padding-top: 5px;
 }

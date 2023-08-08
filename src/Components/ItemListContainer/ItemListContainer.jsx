@@ -31,7 +31,7 @@ function ItemListContainer({ greeting }){
 
     return(
         <div className="anuncio">
-            <h4>{greeting}</h4>
+            <h3>{greeting}</h3>
             <ItemList items={items}/>
         </div>
     )

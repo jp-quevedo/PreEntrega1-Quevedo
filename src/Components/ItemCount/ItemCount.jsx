@@ -25,12 +25,12 @@ const ItemCount = ({stock, onAddToCart}) => {
         <div className="counter">
             <div className="selectingbox">
                 <button className="selectors" onClick={decrement}>-</button>
-                <h5>{quantity}</h5>
+                <h3>{quantity}</h3>
                 <button className="selectors" onClick={increment}>+</button>
             </div>
             <div>
-                <button className="selectors" onClick={handleConfirm} disabled={!stock}>
-                    Agregar al Carrito
+                <button className="adder" onClick={handleConfirm} disabled={!stock}>
+                    <p>Agregar Item</p>
                 </button>
             </div>
         </div>

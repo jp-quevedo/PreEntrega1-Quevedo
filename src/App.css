@@ -1,9 +1,16 @@
 .App {
   text-align: center;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .header {
   background-color: rgb(234, 238, 234);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
 }
 
 .container {
@@ -12,5 +19,5 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: space-evenly;
 }

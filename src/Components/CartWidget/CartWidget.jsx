@@ -9,7 +9,7 @@ const CartWidget = () => {
     return(
         <Link to='/cart' className="btn">
             <div className="cart">
-                <img className="cart-icon" src="/assets/carrito.svg" alt="carrito"></img>
+                <img className="cart-icon" src="/assets/bolsa-de-la-compra.svg" alt="carrito"></img>
                 <p style={{ display: countContext.getTotalItemsInCart() > 0 ? 'block' : 'none' }}> {countContext.getTotalItemsInCart()} </p>
             </div>
         </Link> 

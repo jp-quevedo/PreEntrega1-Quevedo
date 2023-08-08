@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import NavBar from './Components/NavBar/NavBar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
@@ -17,7 +16,7 @@ function App() {
           </header>
           <main className="container">
             <Routes>
-              <Route path='/' element={ <ItemListContainer greeting={`Bienvenido a mi pre-entrega nº2 de React`} /> }/>
+              <Route path='/' element={ <ItemListContainer greeting={`Envíos gratis por compras sobre $80.000!!!`} /> }/>
               <Route path='/category/:categoryId' element={ <ItemListContainer /> }/>
               <Route path='/item/:itemId' element={ <ItemDetailContainer /> }/>
               <Route path='/cart' element={ <CartContainer /> }/>

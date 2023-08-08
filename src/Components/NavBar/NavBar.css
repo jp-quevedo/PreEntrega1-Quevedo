@@ -3,6 +3,7 @@
     margin: 5px 15px;
     color: rgb(35, 35, 35);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -15,11 +16,11 @@
 
 .logo {
     display: block;
-    font-weight: bold;
-    padding-left: 0.5em;
+    padding-right: 1em;
     margin-bottom: 0px;
     text-decoration: none;
     color: rgb(35, 35, 35);
+    font-size: large;
 }
 
 .navBar {
@@ -29,6 +30,5 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    
 }

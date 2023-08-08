@@ -2,28 +2,43 @@ import React from 'react';
 import { useContext } from 'react';
 import { cartContext } from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
-import Item from '../Item/Item';
+import './CartContainer.css';
 
-const CartContainer = () => {
-    const { cart, clearCart, totalQuantity, total} = useContext(cartContext)
+function CartContainer() {
+    const { cart, removeItem, clearCart } = useContext(cartContext)
 
-    if(totalQuantity === 0){
-        return(
+    return (
+        <div className="cart-container">
             <div>
-                <h1>No has agregado productos al carrito</h1>
-                <Link to='/' className="btn">Volver al Inicio</Link>
+                <h2>Bolsa de Compras</h2>
+                <table>
+                    <tr>
+                        <th className="tabla">Nombre</th>
+                        <th className="tabla">Precio Unitario</th>
+                        <th className="tabla">Cantidad Agregada</th>
+                        <th className="tabla">Precio Total</th>
+                        <th className="tabla">Eliminar</th>
+                    </tr>
+                </table>
             </div>
-        )
-    }
-
-    return(
-        <div>
-            { cart.map(p => <Item key={p.id} {...p}/>) }
-            <h3>Total: ${total}</h3>
-            <Link to='/checkout' className="btn">Confirmar Compra</Link>
-            <button onClick={() => clearCart()} className="btn">Vaciar Carrito</button>
+            <div>
+                {cart.map((item) => (
+                    <table>
+                        <tr>
+                        <th className="tabla"><p className="detailcart-text">{item.name}</p></th>
+                        <th className="tabla"><p className="detailcart-text">${item.price}</p></th>
+                        <th className="tabla"><p className="detailcart-text">{item.quantity}</p></th>
+                        <th className="tabla"><p className="detailcart-text">${item.price * item.quantity}</p></th>
+                        <th className="tabla"><button onClick={() => removeItem(item.id)} className="eliminar">
+                        <img className="tabla-icon" src="/assets/basura.svg" alt="eliminar"></img>
+                        </button></th>
+                        </tr>
+                    </table>
+                ))}
+            </div>
         </div>
     )
 }
 
 export default CartContainer;
+

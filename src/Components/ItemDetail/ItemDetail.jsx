@@ -31,19 +31,18 @@ const ItemDetail = ({id, name, price, category, img, stock, description}) => {
                 <img src={img} alt={name} className="detailcard-img"/>
             </picture>
             <section>
-                <br/>
-                <h5>{name}</h5>
-                <h6>Precio: ${price}</h6>
-                <h6>Descripción: {description}</h6>
-                <h6 style={stockStyle}>Stock: {stock}</h6>
+                <p className="detailcard-title">{name}</p>
+                <p className="detailcard-text">Precio: ${price}</p>
+                <p className="detailcard-text">Descripción: {description}</p>
+                <p className="detailcard-text" style={stockStyle}>Stock: {stock}</p>
             </section>
             <footer>
                 {
                     isAddedToCart
-                    ? <Link to='/cart' className="btn">Ir al Carrito</Link>
+                    ? <Link to='/cart' className="detail-btn">Ir al Carrito</Link>
                     : <ItemCount stock={stock} onAddToCart={handleAddToCart} />
                 }
-                <Link to='/' className="btn">Volver al Inicio</Link>
+                <Link to='/' className="detail-btn">Seguir Comprando</Link>
             </footer>
         </article>
     )

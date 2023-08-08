@@ -32,17 +32,20 @@ const CartContainer = () => {
             </div>
             <div>
                 {cart.map((item) => (
-                    <table>
-                        <tr>
-                            <th className="tabla"><p className="detailcart-text">{item.name}</p></th>
-                            <th className="tabla"><p className="detailcart-text">${item.price}</p></th>
-                            <th className="tabla"><p className="detailcart-text">{item.quantity}</p></th>
-                            <th className="tabla"><p className="detailcart-text">${item.price * item.quantity}</p></th>
-                            <th className="tabla"><button onClick={() => removeItem(item.id)} className="eliminar">
-                                <img className="tabla-icon" src="/assets/basura.svg" alt="eliminar"></img></button>
-                            </th>
-                        </tr>
-                    </table>
+                    <div key={item}>
+                        {console.log(item.id)}
+                        <table>
+                            <tr>
+                                <th className="tabla"><p className="detailcart-text">{item.name}</p></th>
+                                <th className="tabla"><p className="detailcart-text">${item.price}</p></th>
+                                <th className="tabla"><p className="detailcart-text">{item.quantity}</p></th>
+                                <th className="tabla"><p className="detailcart-text">${item.price * item.quantity}</p></th>
+                                <th className="tabla"><button onClick={() => removeItem(item.id)} className="eliminar">
+                                    <img className="tabla-icon" src="/assets/basura.svg" alt="eliminar"></img></button>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
                 ))}
                 <table>
                     <tr>
@@ -57,8 +60,8 @@ const CartContainer = () => {
                 </table>
             </div>
             <div>
-                <Link to='/' className="detail-btn">Pagar Compra</Link>
-                <Link to='/' className="detail-btn">Seguir Comprando</Link>
+                <Link to='/' className="checkout-btn">Pagar Compra</Link>
+                <Link to='/' className="checkout-btn">Seguir Comprando</Link>
                 <div className="eliminar-bolsa"><button onClick={() => clearCart()} className="eliminar-bolsa-btn">Vaciar Bolsa</button></div>
             </div>
         </div>

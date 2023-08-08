@@ -68,3 +68,23 @@ h2 {
 .eliminar-bolsa:hover {
     border: 1px solid red;
 }
+
+.checkout-btn {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 5px 15px;
+    color: rgb(35, 35, 35);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+}
+
+.checkout-btn:hover {
+    text-decoration: underline;
+}
+
+.checkout-btn:active {
+    color: rgb(35, 35, 35);
+}

@@ -54,7 +54,7 @@ const CartDetail = () => {
                                 <p className="totalcart-text">Costo de Envío:</p>
                             </th>
                             <th>
-                                <p className="totalcart-text">${getTotalShipping()}</p>
+                                <p className="totalcart-text">${getTotalShipping().toFixed(0)}</p>
                             </th>
                         </tr>
                         <tr>
@@ -62,7 +62,7 @@ const CartDetail = () => {
                                 <p className="totalcart-text">Total de la Compra:</p>
                             </th>
                             <th>
-                                <p className="totalcart-text">${getTotalPriceInCart() + getTotalShipping()}</p>
+                                <p className="totalcart-text">${(getTotalPriceInCart() + getTotalShipping()).toFixed(0)}</p>
                             </th>
                         </tr>
                     </table>              

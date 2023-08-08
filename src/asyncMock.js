@@ -49,7 +49,7 @@ const items = [
         name: 'Marco Pequeño',
         price: 7990,
         category: 'marcos',
-        img: '/assets/marco-pequeño.avif',
+        img: '/assets/marco-pequeno.avif',
         stock: 9,
         description: 'Tamaño Retrato',
     },

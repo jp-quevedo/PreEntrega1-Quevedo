@@ -13,7 +13,7 @@ const CartContainer = () => {
             <div className="cart-vacio">
                 <h2>Bolsa de Compras</h2>
                 <p className="cartvacio-text">No hay items en la Bolsa</p>
-                <Link to='/' className="detail-btn">Seguir Comprando</Link>
+                <Link to='/' className="detail-btn">Ir a Comprar</Link>
             </div>
         )
     }

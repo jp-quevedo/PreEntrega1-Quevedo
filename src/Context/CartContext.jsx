@@ -70,7 +70,7 @@ export const CartProvider = ({ children }) => {
     function getTotalItemsInCart() {
         let total = 0;
         cart.forEach((item) => {
-          total ++;
+          total += item.quantity;
         });
         return total;
     }
@@ -78,7 +78,7 @@ export const CartProvider = ({ children }) => {
     function getTotalPriceInCart() {
         let total = 0;
         cart.forEach((item) => {
-          total += item.count * item.price;
+          total += item.quantity * item.price;
         });
         return total;
     }

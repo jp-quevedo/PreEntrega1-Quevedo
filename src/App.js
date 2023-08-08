@@ -16,7 +16,7 @@ function App() {
           </header>
           <main className="container">
             <Routes>
-              <Route path='/' element={ <ItemListContainer greeting={`Envíos gratis por compras sobre $80.000!!!`} /> }/>
+              <Route path='/' element={ <ItemListContainer greeting={`Envíos gratis por compras sobre $90.000!`} /> }/>
               <Route path='/category/:categoryId' element={ <ItemListContainer /> }/>
               <Route path='/item/:itemId' element={ <ItemDetailContainer /> }/>
               <Route path='/cart' element={ <CartContainer /> }/>

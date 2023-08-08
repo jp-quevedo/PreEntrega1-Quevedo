@@ -49,13 +49,13 @@ const CartContainer = () => {
                 ))}
                 <table>
                     <tr>
-                        <th className="tabla"><p className="detailcart-text">Subtotal: ${getTotalPriceInCart}</p></th>
+                        <th className="tabla"><p className="totalcart-text">Subtotal: ${getTotalPriceInCart()}</p></th>
                     </tr>
                     <tr>
-                        <th className="tabla"><p className="detailcart-text">Costo de Envío: ${getTotalPriceInCart * 0.05}</p></th>
+                        <th className="tabla"><p className="totalcart-text">Costo de Envío: ${getTotalPriceInCart() * 0.05}</p></th>
                     </tr>
                     <tr>
-                        <th className="tabla"><p className="detailcart-text">Total de la Compra: ${}</p></th>
+                        <th className="tabla"><p className="totalcart-text">Total de la Compra: ${getTotalPriceInCart() + getTotalPriceInCart() * 0.05}</p></th>
                     </tr>
                 </table>
             </div>

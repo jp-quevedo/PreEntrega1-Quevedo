@@ -35,6 +35,13 @@ h2 {
     width: 185px;
 }
 
+.totalcart-text {
+    font-weight: lighter;
+    font-size: 1em;
+    padding: 0px;
+    margin: 0px;
+}
+
 .eliminar {
     margin: 0px;
     padding: 5px 10px;

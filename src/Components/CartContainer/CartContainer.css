@@ -35,11 +35,13 @@ h2 {
 }
 
 .eliminar {
+    padding: 4px 6px 0px 6px;
     border: 0px;
     background-color: white;
     cursor: pointer;
 }
 
 .eliminar:hover {
-    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
 }

@@ -25,13 +25,13 @@ function CartContainer() {
                 {cart.map((item) => (
                     <table>
                         <tr>
-                        <th className="tabla"><p className="detailcart-text">{item.name}</p></th>
-                        <th className="tabla"><p className="detailcart-text">${item.price}</p></th>
-                        <th className="tabla"><p className="detailcart-text">{item.quantity}</p></th>
-                        <th className="tabla"><p className="detailcart-text">${item.price * item.quantity}</p></th>
-                        <th className="tabla"><button onClick={() => removeItem(item.id)} className="eliminar">
-                        <img className="tabla-icon" src="/assets/basura.svg" alt="eliminar"></img>
-                        </button></th>
+                            <th className="tabla"><p className="detailcart-text">{item.name}</p></th>
+                            <th className="tabla"><p className="detailcart-text">${item.price}</p></th>
+                            <th className="tabla"><p className="detailcart-text">{item.quantity}</p></th>
+                            <th className="tabla"><p className="detailcart-text">${item.price * item.quantity}</p></th>
+                            <th className="tabla"><button onClick={() => removeItem(item.id)} className="eliminar">
+                                <img className="tabla-icon" src="/assets/basura.svg" alt="eliminar"></img></button>
+                            </th>
                         </tr>
                     </table>
                 ))}

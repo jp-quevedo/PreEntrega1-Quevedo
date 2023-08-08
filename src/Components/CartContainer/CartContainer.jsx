@@ -44,12 +44,22 @@ const CartContainer = () => {
                         </tr>
                     </table>
                 ))}
-                <div className="eliminar-bolsa"><button onClick={() => clearCart()} className="eliminar-bolsa-btn">Vaciar Bolsa</button></div>
                 <table>
-                    <tr className="tabla">Subtotal: ${getTotalPriceInCart}</tr>
-                    <tr className="tabla">Costo de Envío: ${getTotalPriceInCart * 0.05}</tr>
-                    <tr className="tabla">Total de la Compra: ${}</tr>
+                    <tr>
+                        <th className="tabla"><p className="detailcart-text">Subtotal: ${getTotalPriceInCart}</p></th>
+                    </tr>
+                    <tr>
+                        <th className="tabla"><p className="detailcart-text">Costo de Envío: ${getTotalPriceInCart * 0.05}</p></th>
+                    </tr>
+                    <tr>
+                        <th className="tabla"><p className="detailcart-text">Total de la Compra: ${}</p></th>
+                    </tr>
                 </table>
+            </div>
+            <div>
+                <Link to='/' className="detail-btn">Pagar Compra</Link>
+                <Link to='/' className="detail-btn">Seguir Comprando</Link>
+                <div className="eliminar-bolsa"><button onClick={() => clearCart()} className="eliminar-bolsa-btn">Vaciar Bolsa</button></div>
             </div>
         </div>
     )

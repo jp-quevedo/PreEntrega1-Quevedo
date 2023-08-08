@@ -32,35 +32,39 @@ h2 {
     font-size: 1em;
     padding: 0px;
     margin: 0px;
+    width: 185px;
 }
 
 .eliminar {
-    padding: 4px 6px 0px 6px;
-    border: 0px;
+    margin: 0px;
+    padding: 5px 10px;
+    border: 1px solid rgb(35, 35, 35);
+    border-radius: 5px;
     background-color: white;
     cursor: pointer;
 }
 
 .eliminar:hover {
     border: 1px solid red;
-    border-radius: 5px;
 }
 
 .eliminar-bolsa {
     width: fit-content;
-    padding-bottom: 16px;
+    display: inline-block;
+    margin: 5px 15px;
+    padding: 5px 15px;
+    border: 1px solid rgb(35, 35, 35);
+    border-radius: 5px;
 }
 
 .eliminar-bolsa-btn {
-    border: 0px;
     background-color: white;
     cursor: pointer;
-    padding: 0px;
     font-size: 1em;
+    border: 0px;
+    padding: 0px;
 }
 
-.eliminar-bolsa-btn:hover {
-    padding: 4px 6px 0px 6px;
+.eliminar-bolsa:hover {
     border: 1px solid red;
-    border-radius: 5px;
 }

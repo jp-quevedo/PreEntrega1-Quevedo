@@ -30,9 +30,10 @@ h2 {
 .detailcart-text {
     font-weight: lighter;
     font-size: 1em;
-    padding: 0px;
-    margin: 0px;
+    padding: 0px 0px 16px 0px;
+    text-align: left;
     width: 185px;
+    margin: 0px;
 }
 
 .totalcart-text {
@@ -40,11 +41,14 @@ h2 {
     font-size: 1em;
     padding: 0px;
     margin: 0px;
+    width: 185px;
+    text-align: left;
+    padding: 0px 0px 16px 0px;
 }
 
 .eliminar {
     margin: 0px;
-    padding: 5px 10px;
+    padding: 2px 5px 0px 5px;
     border: 1px solid rgb(35, 35, 35);
     border-radius: 5px;
     background-color: white;

@@ -29,6 +29,7 @@ const CartContainer = () => {
                         <th className="tabla">Eliminar</th>
                     </tr>
                 </table>
+                <hr/>
             </div>
             <div>
                 {cart.map((item) => (
@@ -45,20 +46,36 @@ const CartContainer = () => {
                                 </th>
                             </tr>
                         </table>
+                        <hr/>
                     </div>
                 ))}
-                <table>
-                    <tr>
-                        <th className="tabla"><p className="totalcart-text">Subtotal: ${getTotalPriceInCart()}</p></th>
-                    </tr>
-                    <tr>
-                        <th className="tabla"><p className="totalcart-text">Costo de Envío: ${getTotalPriceInCart() * 0.05}</p></th>
-                    </tr>
-                    <tr>
-                        <th className="tabla"><p className="totalcart-text">Total de la Compra: ${getTotalPriceInCart() + getTotalPriceInCart() * 0.05}</p></th>
-                    </tr>
-                </table>
-            </div>
+                    <table className="tabla">
+                        <tr>
+                            <th>
+                                <p className="totalcart-text">Subtotal:</p>
+                            </th>
+                            <th>
+                                <p className="totalcart-text">${getTotalPriceInCart()}</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p className="totalcart-text">Costo de Envío:</p>
+                            </th>
+                            <th>
+                                <p className="totalcart-text">${getTotalPriceInCart() * 0.05}</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p className="totalcart-text">Total de la Compra:</p>
+                            </th>
+                            <th>
+                                <p className="totalcart-text">${getTotalPriceInCart() + getTotalPriceInCart() * 0.05}</p>
+                            </th>
+                        </tr>
+                    </table>              
+                </div>
             <div>
                 <Link to='/' className="checkout-btn">Pagar Compra</Link>
                 <Link to='/' className="checkout-btn">Seguir Comprando</Link>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './CartDetail.css';
 
 const CartDetail = () => {
-    const { cart, removeItem, clearCart, getTotalItemsInCart, getTotalPriceInCart } = useContext(cartContext)
+    const { cart, removeItem, clearCart, getTotalPriceInCart, getTotalShipping } = useContext(cartContext)
 
     return (
         <div className="cart-container">
@@ -54,7 +54,7 @@ const CartDetail = () => {
                                 <p className="totalcart-text">Costo de Envío:</p>
                             </th>
                             <th>
-                                <p className="totalcart-text">${getTotalPriceInCart() * 0.05}</p>
+                                <p className="totalcart-text">${getTotalShipping()}</p>
                             </th>
                         </tr>
                         <tr>
@@ -62,7 +62,7 @@ const CartDetail = () => {
                                 <p className="totalcart-text">Total de la Compra:</p>
                             </th>
                             <th>
-                                <p className="totalcart-text">${getTotalPriceInCart() + getTotalPriceInCart() * 0.05}</p>
+                                <p className="totalcart-text">${getTotalPriceInCart() + getTotalShipping()}</p>
                             </th>
                         </tr>
                     </table>              

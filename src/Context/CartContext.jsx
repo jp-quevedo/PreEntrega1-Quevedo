@@ -83,8 +83,19 @@ export const CartProvider = ({ children }) => {
         return total;
     }
 
+    function getTotalShipping() {
+        let total = 0;
+        if(getTotalPriceInCart() > 90000) {
+            total = 0;
+        }
+        else {
+            total = getTotalPriceInCart() * 0.05;
+        }
+        return total;
+    }
+
     return (
-        <cartContext.Provider value={{ cart, addItem, removeItem, clearCart, isInCart, getTotalItemsInCart, getTotalPriceInCart }}>
+        <cartContext.Provider value={{ cart, addItem, removeItem, clearCart, isInCart, getTotalItemsInCart, getTotalPriceInCart, getTotalShipping }}>
             { children }
         </cartContext.Provider>
     )

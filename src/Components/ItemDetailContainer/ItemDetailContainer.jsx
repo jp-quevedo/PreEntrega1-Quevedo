@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { getItem } from '../../asyncMock';
+import { getItem } from '../../Services/Firebase';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 import Loader from '../Loader/Loader';
@@ -18,7 +18,7 @@ function ItemDetailContainer() {
             setItemIsLoading(false);
         }
         requestItem();
-    }, [])
+    }, [itemId])
 
     if (itemIsLoading){
         return(

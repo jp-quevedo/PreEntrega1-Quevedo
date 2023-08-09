@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { getItems, getCategoryItem } from '../../asyncMock';
+import { getItems, getCategoryItem } from '../../Services/Firebase';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import Loader from '../Loader/Loader';

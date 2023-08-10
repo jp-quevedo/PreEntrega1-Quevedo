@@ -24,6 +24,7 @@ async function getItems() {
 async function getItem(id) {
     const itemRef = doc(db, "items", id);
     const docSnapshot = await getDoc(itemRef);
+    
     if (docSnapshot.exists()) {
         return { ...docSnapshot.data(), id: docSnapshot.id};
     } else {
@@ -37,7 +38,12 @@ async function getCategoryItem(categoryId) {
     const documentsSnapshot = await getDocs(q);
     const documents = documentsSnapshot.docs;
     const docsData = documents.map((item) => ({...item.data(), id: item.id}));
-    return(docsData);
+
+    if (docsData.length === 0) {
+      throw new Error("No encontramos esa categoría");
+    } else {
+      return(docsData);
+    }
   }
 
 export { getItems, getItem, getCategoryItem }

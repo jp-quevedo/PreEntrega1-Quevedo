@@ -2,20 +2,35 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { getItem } from '../../Services/Firebase';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import Loader from '../Loader/Loader';
+import Swal from 'sweetalert2';
 
 function ItemDetailContainer() {
     const [item , setItem] = useState([]);
     const [itemIsLoading , setItemIsLoading] = useState(true);
     const { itemId } = useParams();
+    const [ errorText, setErrorText ] = useState(null);
 
     useEffect(() => {
-        setItemIsLoading(true);
         async function requestItem(){
-            const response = await getItem(itemId);
-            setItem(response);
-            setItemIsLoading(false);
+            setItemIsLoading(true);
+            try {
+                const response = await getItem(itemId);
+                setItem(response);
+            } catch(error) {
+                setErrorText(error.message)
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'No encontramos ese producto!',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    footer: ''
+                    })
+            } finally {
+                setItemIsLoading(false);
+            }
         }
         requestItem();
     }, [itemId])
@@ -26,11 +41,19 @@ function ItemDetailContainer() {
         )
     }
 
-    return(
-        <div>
-            <ItemDetail {...item} />
-        </div>
-    )
+    if (errorText) {
+        return (
+            <div>
+                <Navigate to='/' />
+            </div>
+        )
+    } else {
+        return(
+            <div>
+                <ItemDetail {...item} />
+            </div>
+        )
+    }
 }
 
 export default ItemDetailContainer

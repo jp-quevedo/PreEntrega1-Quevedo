@@ -29,18 +29,25 @@ const ItemCount = ({stock, onAddToCart}) => {
     }
 
     return(
-        <div className="counter">
-            <div className="selectingbox">
-                <button className="selectors" onClick={decrement}>-</button>
-                <h3>{quantity}</h3>
-                <button className="selectors" onClick={increment}>+</button>
-            </div>
-            <div>
-                <button className="adder" onClick={handleConfirm} disabled={!stock}>
-                    <p>Agregar Item</p>
-                </button>
-            </div>
+        <div>
+            { (stock === 0)
+                ? <h4>No quedan unidades de este producto.</h4>
+                :   <div className="counter">
+                        <div className="selectingbox">
+                            <button className="selectors" onClick={decrement}>-</button>
+                            <h3>{quantity}</h3>
+                            <button className="selectors" onClick={increment}>+</button>
+                        </div>
+                        <div>
+                            <button className="adder" onClick={handleConfirm} disabled={!stock}>
+                                <p>Agregar Item</p>
+                            </button>
+                        </div>
+                    </div>
+            }
         </div>
+
+        
     )
 }
 

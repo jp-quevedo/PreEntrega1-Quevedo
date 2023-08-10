@@ -8,7 +8,7 @@ const ItemDetail = ({id, name, price, category, img, stock, description}) => {
 
     const [quantityAdded, setQuantityAdded] = useState(0)
     const [isAddedToCart , setIsAddedToCart] = useState(false);
-    const { addItem } = useContext(cartContext)
+    const { addItem, getItemInCart } = useContext(cartContext)
 
     const handleAddToCart = (quantity) => {
         setQuantityAdded(quantity)
@@ -21,8 +21,11 @@ const ItemDetail = ({id, name, price, category, img, stock, description}) => {
         setIsAddedToCart(true);
     }
 
+    const itemInCart = getItemInCart(id);
+    const maxItems = itemInCart ? stock - itemInCart.quantity : stock;
+
     const stockStyle = {
-        color: stock>=5? "green": "red"
+        color: maxItems>=5? "green" : "red"
     }
 
     return(
@@ -34,13 +37,13 @@ const ItemDetail = ({id, name, price, category, img, stock, description}) => {
                 <p className="detailcard-title">{name}</p>
                 <p className="detailcard-text">Precio: ${price}</p>
                 <p className="detailcard-text">Descripción: {description}</p>
-                <p className="detailcard-text" style={stockStyle}>Stock: {stock}</p>
+                <p className="detailcard-text" style={stockStyle}>Stock: {maxItems}</p>
             </section>
             <footer>
                 {
                     isAddedToCart
                     ? <Link to='/cart' className="detail-btn">Ir al Carrito</Link>
-                    : <ItemCount stock={stock} onAddToCart={handleAddToCart} />
+                    : <ItemCount stock={maxItems} onAddToCart={handleAddToCart} />
                 }
                 <Link to='/' className="detail-btn">Seguir Comprando</Link>
             </footer>

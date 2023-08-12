@@ -1,0 +1,38 @@
+.checkout-container {
+    margin-top: 90px;
+}
+
+.checkout-div {
+    display: flex;
+    padding: 0px 0px 16px 0px;
+}
+
+.checkout-text {
+    text-align: left;
+    font-weight: bold;
+    width: 100px;
+}
+
+.checkout-imput {
+    width: 380px;
+}
+
+.confirmation-btn {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 5px 15px;
+    color: rgb(35, 35, 35);
+    cursor: pointer;
+    display: inline-block;
+    background-color: white;
+    font-size: 1em;
+}
+
+.confirmation-btn:hover {
+    text-decoration: underline;
+}
+
+.confirmation-btn:active {
+    color: rgb(35, 35, 35);
+}

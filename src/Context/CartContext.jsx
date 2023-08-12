@@ -70,6 +70,10 @@ export const CartProvider = ({ children }) => {
         })
     }
 
+    const postOrderCart = () => {
+        setCart([])
+    }
+
     const isInCart = (itemId) => {
         return cart.some(item => item.id === itemId)
     }
@@ -101,6 +105,11 @@ export const CartProvider = ({ children }) => {
         return total;
     }
 
+    function orderTotal(){
+        let total = getTotalPriceInCart() + getTotalShipping();
+        return total;
+    }
+
     function getItemInCart(id) {
         return cart.find((item) => item.id === id);
       }
@@ -116,7 +125,9 @@ export const CartProvider = ({ children }) => {
                 getTotalItemsInCart,
                 getTotalPriceInCart,
                 getTotalShipping,
-                getItemInCart
+                getItemInCart,
+                postOrderCart,
+                orderTotal
             }}>
             { children }
         </cartContext.Provider>

@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs, doc, getDoc, where, query } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, doc, getDoc, where, query, addDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDFKr92nRA3z1xrpBi3HM8-4cL5m4tuG5M",
@@ -46,4 +46,26 @@ async function getCategoryItem(categoryId) {
     }
   }
 
-export { getItems, getItem, getCategoryItem }
+  async function createOrder(orderData) {
+    const collectionRef = collection(db, "orders");
+    const docCreated = await addDoc(collectionRef, orderData);
+
+    return (
+      docCreated.id
+    )
+  }
+
+  async function getOrder(id) {
+    const docRef = doc(db, "orders", id);
+    const docSnapshot = await getDoc(docRef);
+
+    if(docSnapshot.exists()) {
+      return {
+        ...docSnapshot.data(), id: docSnapshot.id
+      }
+    } else {
+      throw new Error("No pudimos procesar la solicitud");
+    }
+  }
+
+export { getItems, getItem, getCategoryItem, createOrder, getOrder }

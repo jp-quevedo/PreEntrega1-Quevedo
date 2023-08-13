@@ -1,8 +1,7 @@
+import Loader from '../Loader/Loader';
+import { getOrder } from '../../Services/Firebase';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getOrder } from '../../Services/Firebase';
-import Loader from '../Loader/Loader';
-import "./OrderConfirmation.css"
 
 function OrderConfirmation() {
   const [orderData, setOrderData] = useState(null);
@@ -15,31 +14,31 @@ function OrderConfirmation() {
   }, [id]);
 
   return (
-    <div className="order-container">
+    <div className="box-container">
       <h2>Gracias por tu compra!</h2>
       {orderData !== null ? (
         <div>
           <h4>Te entregamos los detalles de la orden:</h4>
-            <table className="order-box">
+            <table className="table">
               <thead>
                 <tr>
-                  <th className="tabla">Nombre</th>
-                  <th className="tabla">Precio Unitario</th>
-                  <th className="tabla">Cantidad Agregada</th>
-                  <th className="tabla">Precio Total</th>
+                  <th className="table-title">Nombre</th>
+                  <th className="table-title">Precio Unitario</th>
+                  <th className="table-title">Cantidad Agregada</th>
+                  <th className="table-title">Precio Total</th>
                 </tr>
               </thead>
             </table>
             {orderData.items.map((item) => {
               return (
                 <div>
-                  <table>
+                  <table className="table">
                     <tbody>
                       <tr>
-                        <th className="tabla"><p className="detailcart-text">{item.name}</p></th>
-                        <th className="tabla"><p className="detailcart-text">${item.price}</p></th>
-                        <th className="tabla"><p className="detailcart-text">{item.quantity}</p></th>
-                        <th className="tabla"><p className="detailcart-text">${item.price * item.quantity}</p></th>
+                        <th><p className="detail-cart-text">{item.name}</p></th>
+                        <th><p className="detail-cart-text">${item.price}</p></th>
+                        <th><p className="detail-cart-text">{item.quantity}</p></th>
+                        <th><p className="detail-cart-text">${item.price * item.quantity}</p></th>
                       </tr>
                     </tbody>
                   </table>
@@ -47,38 +46,38 @@ function OrderConfirmation() {
                 </div>
               );
             })}
-            <table className="tabla">
+            <table className="table">
               <tfoot> 
                 <tr>
                   <th>
-                    <p className="totalcart-text">Costo de Envío:</p>
+                    <p className="total-cart-text">Costo de Envío:</p>
                     </th>
                     <th>
-                    <p className="totalcart-text">${orderData.shipping}</p>
+                    <p className="total-cart-text">${orderData.shipping}</p>
                   </th>
                 </tr>           
                 <tr>
                   <th>
-                    <p className="totalcart-text">Monto de la Compra:</p>
+                    <p className="total-cart-text">Monto de la Compra:</p>
                   </th>
                   <th>
-                    <p className="totalcart-text">${orderData.total}</p>
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    <p className="totalcart-text">Fecha de la Compra:</p>
-                  </th>
-                  <th>
-                    <p className="totalcart-text">{Date()}</p>
+                    <p className="total-cart-text">${orderData.total}</p>
                   </th>
                 </tr>
                 <tr>
                   <th>
-                    <p className="totalcart-text">Orden de la Compra:</p>
+                    <p className="total-cart-text">Fecha de la Compra:</p>
                   </th>
                   <th>
-                    <p className="totalcart-text">{orderData.id}</p>
+                    <p className="total-cart-text">{Date()}</p>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <p className="total-cart-text">Orden de la Compra:</p>
+                  </th>
+                  <th>
+                    <p className="total-cart-text">{orderData.id}</p>
                   </th>
                 </tr>
               </tfoot>

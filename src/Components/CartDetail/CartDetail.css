@@ -1,32 +1,18 @@
-
-.tabla {
-    text-align: left;
-    width: 185px;
-}
-
-.tabla-icon {
-    vertical-align: baseline;
-    width: 25px;
-}
-
-h6 {
-    margin: 0px;
-}
-
-.cart-container {
+.box-container {
     margin-top: 90px;
 }
 
-table {
-    width: 100%;
+.table {
+    text-align: left;
     border-collapse: collapse;
 }
 
-h2 {
-    margin: 0px 0px 16px 0px;
+.table-title {
+    width: 185px;
+    padding-bottom: 16px;
 }
 
-.detailcart-text {
+.detail-cart-text {
     display: inline-block;
     align-items: center;
     font-weight: lighter;
@@ -36,17 +22,7 @@ h2 {
     margin: 0px;
 }
 
-.totalcart-text {
-    font-weight: lighter;
-    font-size: 1em;
-    padding: 0px;
-    margin: 0px;
-    width: 185px;
-    text-align: left;
-    padding: 0px 0px 16px 0px;
-}
-
-.eliminar {
+.remove-item {
     margin: 0px;
     padding: 2px 5px 0px 5px;
     border: 1px solid rgb(35, 35, 35);
@@ -55,29 +31,23 @@ h2 {
     cursor: pointer;
 }
 
-.eliminar:hover {
+.remove-item:hover {
     border: 1px solid red;
 }
 
-.eliminar-bolsa {
-    width: fit-content;
-    display: inline-block;
-    margin: 5px 15px;
-    padding: 5px 15px;
-    border: 1px solid rgb(35, 35, 35);
-    border-radius: 5px;
+.remove-icon {
+    vertical-align: baseline;
+    width: 25px;
 }
 
-.eliminar-bolsa-btn {
-    background-color: white;
-    cursor: pointer;
+.total-cart-text {
+    font-weight: lighter;
     font-size: 1em;
-    border: 0px;
     padding: 0px;
-}
-
-.eliminar-bolsa:hover {
-    border: 1px solid red;
+    margin: 0px;
+    width: 185px;
+    text-align: left;
+    padding: 0px 0px 16px 0px;
 }
 
 .checkout-btn {
@@ -98,4 +68,29 @@ h2 {
 
 .checkout-btn:active {
     color: rgb(35, 35, 35);
+}
+
+.remove-cart {
+    width: fit-content;
+    display: inline-block;
+    margin: 5px 15px;
+    padding: 5px 15px;
+    border: 1px solid rgb(35, 35, 35);
+    border-radius: 5px;
+}
+
+.remove-cart-btn {
+    background-color: white;
+    cursor: pointer;
+    font-size: 1em;
+    border: 0px;
+    padding: 0px;
+}
+
+.remove-cart:hover {
+    border: 1px solid red;
+}
+
+h2 {
+    margin: 0px 0px 16px 0px;
 }

@@ -1,10 +1,9 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { getItem } from '../../Services/Firebase';
-import ItemDetail from '../ItemDetail/ItemDetail';
-import { useParams, Navigate } from 'react-router-dom';
-import Loader from '../Loader/Loader';
 import Swal from 'sweetalert2';
+import ItemDetail from '../ItemDetail/ItemDetail';
+import Loader from '../Loader/Loader';
+import { getItem } from '../../Services/Firebase';
+import { useState, useEffect } from 'react';
+import { useParams, Navigate } from 'react-router-dom';
 
 function ItemDetailContainer() {
     const [item , setItem] = useState([]);

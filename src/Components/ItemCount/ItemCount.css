@@ -9,7 +9,7 @@
     display: inline-block;
 }
 
-.selectingbox {
+.selecting-box {
     display: flex;
     justify-content: space-between;
     padding-bottom: 5px;
@@ -25,6 +25,14 @@
     display: inline-block;
 }
 
+.selectors:hover {
+    text-decoration: underline;
+}
+
+.selectors:active {
+    color: rgb(35, 35, 35);
+}
+
 .adder {
     width: 180px;
     font-size: 1.25em;
@@ -34,14 +42,6 @@
     text-decoration: none;
     display: inline-block;
     padding: 0px ;
-}
-
-.selectors:hover {
-    text-decoration: underline;
-}
-
-.selectors:active {
-    color: rgb(35, 35, 35);
 }
 
 .adder:hover {

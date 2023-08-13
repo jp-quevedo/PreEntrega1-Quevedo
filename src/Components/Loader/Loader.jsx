@@ -1,5 +1,5 @@
-import { DotSpinner } from '@uiball/loaders';
 import './Loader.css';
+import { DotSpinner } from '@uiball/loaders';
 
 function Loader(){
     return(

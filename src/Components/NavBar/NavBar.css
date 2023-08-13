@@ -1,3 +1,21 @@
+.nav-bar {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: block;
+    padding-right: 1em;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: rgb(35, 35, 35);
+    font-size: large;
+}
+
 .btn {
     padding: 5px 15px;
     margin: 5px 15px;
@@ -12,23 +30,4 @@
 
 .btn:active {
     color: rgb(35, 35, 35);
-}
-
-.logo {
-    display: block;
-    padding-right: 1em;
-    margin-bottom: 0px;
-    text-decoration: none;
-    color: rgb(35, 35, 35);
-    font-size: large;
-}
-
-.navBar {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    
 }

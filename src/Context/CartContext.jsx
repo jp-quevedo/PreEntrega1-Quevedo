@@ -1,5 +1,5 @@
-import { createContext, useState } from 'react';
 import Swal from 'sweetalert2';
+import { createContext, useState } from 'react';
 
 export const cartContext = createContext({ cart: [] })
 
@@ -20,7 +20,7 @@ export const CartProvider = ({ children }) => {
     const removeItem = (itemId) => {
         Swal.fire({
             title: 'Estás seguro?',
-            text: "No podrás revertir esta acción!",
+            text: 'Vas a eliminar este ítem!',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: 'red',
@@ -47,19 +47,19 @@ export const CartProvider = ({ children }) => {
     const clearCart = () => {
         Swal.fire({
             title: 'Estás seguro?',
-            text: "No podrás revertir esta acción!",
+            text: 'Vas a vaciar la bolsa de compras!',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: 'red',
             cancelButtonColor: 'gray',
-            confirmButtonText: 'Vaciar Bolsa',
+            confirmButtonText: 'Vaciar bolsa',
             cancelButtonText: 'Cancelar',
           }).then((result) => {
             if (result.isConfirmed) {
                 setCart([])
                 Swal.fire({
                     icon: 'success',
-                    title: 'Bolsa Vaciada!',
+                    title: 'Bolsa vaciada!',
                     showConfirmButton: false,
                     timer: 1500,
                 })

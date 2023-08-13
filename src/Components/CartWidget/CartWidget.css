@@ -1,11 +1,11 @@
-.cart-icon {
-    width: 25px;
-    vertical-align: baseline;
-}
-
 .cart {
     display: flex;
     flex-direction: row;
+}
+
+.cart-icon {
+    width: 25px;
+    vertical-align: baseline;
 }
 
 p {

@@ -1,11 +1,10 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { getItems, getCategoryItem } from '../../Services/Firebase';
-import ItemList from '../ItemList/ItemList';
-import { useParams, Navigate } from 'react-router-dom';
-import Loader from '../Loader/Loader';
 import './ItemListContainer.css';
 import Swal from 'sweetalert2';
+import ItemList from '../ItemList/ItemList';
+import Loader from '../Loader/Loader';
+import { getItems, getCategoryItem } from '../../Services/Firebase';
+import { useState, useEffect } from 'react';
+import { useParams, Navigate } from 'react-router-dom';
 
 function ItemListContainer({ greeting }){
     const [items , setItems] = useState([]);
@@ -50,8 +49,8 @@ function ItemListContainer({ greeting }){
         )
     } else {
     return (
-        <div className="anuncio">
-            <h3>{greeting}</h3>
+        <div className="greeting-text">
+            <h2>{greeting}</h2>
             <ItemList items={items}/>
         </div>
     )}

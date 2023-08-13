@@ -1,13 +1,23 @@
-.detailcard {
+.detail-card {
     width: 320px;
     height: fit-content;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: rgb(234, 238, 234);
-    margin-top: 99px;
+    margin-top: 90px;
     border-radius: 5px;
 }
 
-.detailcard-img {
+.detail-card-title {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.detail-card-text {
+    font-size: 1em;
+    padding-top: 5px;
+}
+
+.detail-card-img {
     border-radius: 5px 5px 0px 0px;
     width: 320px;
 }
@@ -33,15 +43,5 @@
 }
 
 footer {
-    padding-bottom: 15px;
-}
-
-.detailcard-title {
-    font-weight: bold;
-    font-size: 1.25em;
-}
-
-.detailcard-text {
-    font-size: 1em;
-    padding-top: 5px;
+    padding-bottom: 16px;
 }

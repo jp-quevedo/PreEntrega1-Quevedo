@@ -1,3 +1,4 @@
+/*
 const items = [
     {
         id: 1,
@@ -96,3 +97,4 @@ export const getItem = (itemId) => {
         }, 2000)
     })
 }
+*/

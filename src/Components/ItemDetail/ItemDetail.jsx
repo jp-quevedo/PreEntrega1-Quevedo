@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { cartContext } from '../../Context/CartContext';
 
-const ItemDetail = ({id, name, price, category, img, stock, description}) => {
+const ItemDetail = ({id, name, price, img, stock, description}) => {
 
     const [quantityAdded, setQuantityAdded] = useState(0)
     const [isAddedToCart , setIsAddedToCart] = useState(false);
@@ -29,15 +29,15 @@ const ItemDetail = ({id, name, price, category, img, stock, description}) => {
     }
 
     return(
-        <article className="detailcard">
+        <article className="detail-card">
             <picture>
-                <img src={img} alt={name} className="detailcard-img"/>
+                <img src={img} alt={name} className="detail-card-img"/>
             </picture>
             <section>
-                <p className="detailcard-title">{name}</p>
-                <p className="detailcard-text">Precio: ${price}</p>
-                <p className="detailcard-text">Descripción: {description}</p>
-                <p className="detailcard-text" style={stockStyle}>Stock: {maxItems}</p>
+                <p className="detail-card-title">{name}</p>
+                <p className="detail-card-text">Precio: ${price}</p>
+                <p className="detail-card-text">Descripción: {description}</p>
+                <p className="detail-card-text" style={stockStyle}>Stock: {maxItems}</p>
             </section>
             <footer>
                 {

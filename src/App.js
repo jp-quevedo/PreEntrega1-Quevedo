@@ -3,20 +3,20 @@ import NavBar from './Components/NavBar/NavBar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import CartContainer from './Components/CartContainer/CartContainer';
-import OrderConfirmation from './Components/OrderConfirmation/OrderConfirmation';
 import Checkout from './Components/Checkout/Checkout';
-import { BrowserRouter , Routes , Route } from 'react-router-dom';
+import OrderConfirmation from './Components/OrderConfirmation/OrderConfirmation';
 import { CartProvider } from './Context/CartContext';
+import { BrowserRouter , Routes , Route } from 'react-router-dom';
 
 function App() {
   return(
     <div className="App">
       <CartProvider>
         <BrowserRouter>
-          <header className="header">
+          <header className="app-header">
             <NavBar />
           </header>
-          <main className="container">
+          <main className="app-container">
             <Routes>
               <Route path='/' element={ <ItemListContainer greeting={`Envíos gratis por compras sobre $90.000!`} /> }/>
               <Route path='/category/:categoryId' element={ <ItemListContainer /> }/>

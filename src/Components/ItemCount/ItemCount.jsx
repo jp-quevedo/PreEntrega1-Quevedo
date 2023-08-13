@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import './ItemCount.css';
 import Swal from 'sweetalert2';
+import { useState } from 'react';
 
 const ItemCount = ({stock, onAddToCart}) => {
     const [quantity, setQuantity] = useState(1)
@@ -33,7 +33,7 @@ const ItemCount = ({stock, onAddToCart}) => {
             { (stock === 0)
                 ? <h4>No quedan unidades de este producto.</h4>
                 :   <div className="counter">
-                        <div className="selectingbox">
+                        <div className="selecting-box">
                             <button className="selectors" onClick={decrement}>-</button>
                             <h3>{quantity}</h3>
                             <button className="selectors" onClick={increment}>+</button>

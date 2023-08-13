@@ -1,10 +1,9 @@
-import { useNavigate } from 'react-router-dom';
+import "./Checkout.css";
+import Swal from 'sweetalert2';
 import { cartContext } from '../../Context/CartContext';
 import { createOrder } from '../../Services/Firebase';
 import { useContext, useState } from 'react';
-import "./Checkout.css";
-import Swal from 'sweetalert2';
-
+import { useNavigate } from 'react-router-dom';
 
 function Checkout() {
     const [buyer, setBuyer] = useState({

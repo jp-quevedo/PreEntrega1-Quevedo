@@ -110,7 +110,7 @@ function Checkout() {
             <button className="confirmation-btn"
                 onClick={resetForm}
                 >
-                Cancelar
+                Borrar Datos
             </button>
         </form>
     );

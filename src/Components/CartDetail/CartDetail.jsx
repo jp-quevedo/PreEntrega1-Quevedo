@@ -26,7 +26,6 @@ const CartDetail = () => {
             <div>
                 {cart.map((item) => (
                     <div key={item}>
-                        {console.log(item.id)}
                         <table className="table">
                             <tbody>
                                 <tr>

@@ -10,11 +10,11 @@ const Item = ({id, name, img, price}) => {
             </picture>
             <section>
                 <p className="card-title">{name}</p>
-                <p className="card-text">Precio: ${price}</p>
+                <p className="card-text">Price: CLP ${price}</p>
             </section>
             <footer>
                 <Link to={`/item/${id}`}>
-                    <button className ="detail-btn">Ver Detalle</button>
+                    <button className ="detail-btn">Product Detail</button>
                 </Link>
             </footer>
         </article>

@@ -25,7 +25,7 @@ function ItemListContainer({ greeting }){
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: 'No encontramos esa categoría!',
+                    text: "We couldn't find that category!",
                     showConfirmButton: false,
                     timer: 1500,
                     footer: ''

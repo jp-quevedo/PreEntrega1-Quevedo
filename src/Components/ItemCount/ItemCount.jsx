@@ -22,7 +22,7 @@ const ItemCount = ({stock, onAddToCart}) => {
         Swal.fire({
             position: 'center',
             icon: 'success',
-            title: `Agregaste ${quantity} unidad(es) al carrito`,
+            title: `You added ${quantity} unit(s) to the shopping bag!`,
             showConfirmButton: false,
             timer: 1500
           });
@@ -31,7 +31,7 @@ const ItemCount = ({stock, onAddToCart}) => {
     return(
         <div>
             { (stock === 0)
-                ? <h4>No quedan unidades de este producto.</h4>
+                ? <h4>We ran out of stock.</h4>
                 :   <div className="counter">
                         <div className="selecting-box">
                             <button className="selectors" onClick={decrement}>-</button>
@@ -40,7 +40,7 @@ const ItemCount = ({stock, onAddToCart}) => {
                         </div>
                         <div>
                             <button className="adder" onClick={handleConfirm} disabled={!stock}>
-                                <p>Agregar Item</p>
+                                <p>Add Item</p>
                             </button>
                         </div>
                     </div>

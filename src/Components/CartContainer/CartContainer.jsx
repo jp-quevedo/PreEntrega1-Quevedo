@@ -10,9 +10,9 @@ const CartContainer = () => {
     if(getTotalItemsInCart() === 0) {
         return (
             <div className="empty-cart">
-                <h2>Bolsa de Compras</h2>
-                <p className="empty-cart-text">No hay items en la Bolsa</p>
-                <Link to='/' className="detail-btn">Ir a Comprar</Link>
+                <h2>Shopping Bag</h2>
+                <p className="empty-cart-text">Your shopping bag is empty!</p>
+                <Link to='/' className="detail-btn">Go Shopping</Link>
             </div>
         )
     }

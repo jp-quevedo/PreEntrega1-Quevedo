@@ -22,7 +22,7 @@ function ItemDetailContainer() {
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: 'No encontramos ese producto!',
+                    text: "We couldn't find that item!",
                     showConfirmButton: false,
                     timer: 1500,
                     footer: ''

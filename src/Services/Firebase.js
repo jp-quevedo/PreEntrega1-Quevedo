@@ -28,7 +28,7 @@ async function getItem(id) {
     if (docSnapshot.exists()) {
         return { ...docSnapshot.data(), id: docSnapshot.id};
     } else {
-        throw new Error("No encontramos ese producto");
+        throw new Error("We couldn't find that item!");
     }
 }
 
@@ -40,7 +40,7 @@ async function getCategoryItem(categoryId) {
     const docsData = documents.map((item) => ({...item.data(), id: item.id}));
 
     if (docsData.length === 0) {
-      throw new Error("No encontramos esa categoría");
+      throw new Error("We couldn't find that category!");
     } else {
       return(docsData);
     }
@@ -64,7 +64,7 @@ async function getCategoryItem(categoryId) {
         ...docSnapshot.data(), id: docSnapshot.id
       }
     } else {
-      throw new Error("No pudimos procesar la solicitud");
+      throw new Error("Something went wrong!");
     }
   }
 

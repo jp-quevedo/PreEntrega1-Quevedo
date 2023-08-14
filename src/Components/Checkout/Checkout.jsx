@@ -31,8 +31,8 @@ function Checkout() {
             Swal.fire({
                 position: 'center',
                 icon: 'success',
-                title: 'Excelente!',
-                text: 'Orden generada',
+                title: 'Excelent!',
+                text: 'Order generated',
                 showConfirmButton: false,
                 timer: 1500,
             });
@@ -41,7 +41,7 @@ function Checkout() {
         } catch (error) {
             Swal.fire({
                 title: 'Error',
-                text: `No se pudo realizar la compra ${error.message}`,
+                text: `Something went wrong! ${error.message}`,
                 icon: 'warning',
                 showCancelButton: false,
                 timer: 1500,
@@ -67,10 +67,10 @@ function Checkout() {
 
     return (
         <form className="checkout-container">
-            <h2>Completa tus datos para confirmar la compra</h2>
+            <h2>Complete your information to confirm the purchase:</h2>
 
             <div className="checkout-div">
-                <label htmlFor="clientname" className="checkout-text">Nombre</label>
+                <label htmlFor="clientname" className="checkout-text">Name</label>
                 <input className="checkout-imput"
                 value={buyer.clientname}
                 name="clientname"
@@ -90,7 +90,7 @@ function Checkout() {
             </div>
 
             <div className="checkout-div">
-                <label className="checkout-text">Dirección</label>
+                <label className="checkout-text">Adress</label>
                 <input className="checkout-imput"
                 value={buyer.adress}
                 name="adress"
@@ -105,12 +105,12 @@ function Checkout() {
                 }
                 onClick={handleCheckout}
                 >
-                Generar Pedido
+                Generate Order
             </button>
             <button className="confirmation-btn"
                 onClick={resetForm}
                 >
-                Borrar Datos
+                Reset Form
             </button>
         </form>
     );

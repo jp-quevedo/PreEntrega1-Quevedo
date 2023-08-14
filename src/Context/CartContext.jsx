@@ -19,21 +19,21 @@ export const CartProvider = ({ children }) => {
 
     const removeItem = (itemId) => {
         Swal.fire({
-            title: 'Estás seguro?',
-            text: 'Vas a eliminar este ítem!',
+            title: 'Are you sure?',
+            text: "You're about to remove this item!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: 'red',
             cancelButtonColor: 'gray',
-            confirmButtonText: 'Eliminar',
-            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Remove',
+            cancelButtonText: 'Cancel',
           }).then((result) => {
             if (result.isConfirmed) {
                 const cartUpdated = cart.filter(item => item.id !== itemId)
                 setCart(cartUpdated)
                 Swal.fire({
                     icon: 'success',
-                    title: 'Eliminado!',
+                    title: 'Item Removed!',
                     showConfirmButton: false,
                     timer: 1500,
                 })
@@ -46,20 +46,20 @@ export const CartProvider = ({ children }) => {
 
     const clearCart = () => {
         Swal.fire({
-            title: 'Estás seguro?',
-            text: 'Vas a vaciar la bolsa de compras!',
+            title: 'Are you sure?',
+            text: "You're about to empty your shopping bag!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: 'red',
             cancelButtonColor: 'gray',
-            confirmButtonText: 'Vaciar bolsa',
-            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Empty Bag',
+            cancelButtonText: 'Cancel',
           }).then((result) => {
             if (result.isConfirmed) {
                 setCart([])
                 Swal.fire({
                     icon: 'success',
-                    title: 'Bolsa vaciada!',
+                    title: 'Bag Emptied!',
                     showConfirmButton: false,
                     timer: 1500,
                 })

@@ -25,6 +25,17 @@
     background-color: rgb(234, 238, 234);
 }
 
+.about-btn {
+    height: 25px;
+    padding: 0px 15px;
+    margin: 0px 15px;
+    color: rgb(35, 35, 35);
+    cursor: pointer;
+    text-decoration: none;
+    border: 0px;
+    background-color: rgb(234, 238, 234);
+}
+
 .nav-bar-icon {
     width: 25px;
     vertical-align: baseline;

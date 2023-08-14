@@ -35,17 +35,17 @@ const ItemDetail = ({id, name, price, img, stock, description}) => {
             </picture>
             <section>
                 <p className="detail-card-title">{name}</p>
-                <p className="detail-card-text">Precio: ${price}</p>
-                <p className="detail-card-text">Descripción: {description}</p>
+                <p className="detail-card-text">Price: CLP ${price}</p>
+                <p className="detail-card-text">Description: {description}</p>
                 <p className="detail-card-text" style={stockStyle}>Stock: {maxItems}</p>
             </section>
             <footer>
                 {
                     isAddedToCart
-                    ? <Link to='/cart' className="detail-btn">Ir al Carrito</Link>
+                    ? <Link to='/cart' className="detail-btn">Go to the Shopping Bag</Link>
                     : <ItemCount stock={maxItems} onAddToCart={handleAddToCart} />
                 }
-                <Link to='/' className="detail-btn">Seguir Comprando</Link>
+                <Link to='/' className="detail-btn">Continue Shopping</Link>
             </footer>
         </article>
     )

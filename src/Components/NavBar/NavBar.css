@@ -30,6 +30,11 @@
     vertical-align: baseline;
 }
 
+.nav-bar-close-icon {
+    width: 18.75px;
+    vertical-align: baseline;
+}
+
 .menu-items {
     display: flex;
     flex-direction: row;
@@ -54,6 +59,16 @@
 
 .btn:active {
     color: rgb(35, 35, 35);
+}
+
+.menu-btn {
+    padding: 5px 15px;
+    margin: 5px 15px;
+    color: rgb(35, 35, 35);
+    cursor: pointer;
+    text-decoration: none;
+    border: 0px;
+    background-color: rgb(234, 238, 234);
 }
 
 @media (max-width: 425px) {

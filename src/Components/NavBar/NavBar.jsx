@@ -18,12 +18,12 @@ function NavBar(){
                 </button>
                 {isShown && (
                     <div className="menu-items">
-                        <Link to='/category/candeleros' className="btn" onClick={() => setIsShown(false)}>Candeleros</Link>
-                        <Link to='/category/espejos' className="btn" onClick={() => setIsShown(false)}>Espejos</Link>
-                        <Link to='/category/marcos' className="btn" onClick={() => setIsShown(false)}>Marcos</Link>
-                        <Link to='/category/plantas' className="btn" onClick={() => setIsShown(false)}>Plantas</Link>
-                        <Link to='/' className="btn" onClick={() => setIsShown(false)}>Ver Todo</Link>
-                        <button className="btn" onClick={() => setIsShown(false)}><img className="nav-bar-icon" src="/assets/cruz.svg" alt="cerrar"></img></button>
+                        <Link to='/category/candeleros' className="menu-btn" onClick={() => setIsShown(false)}>Candeleros</Link>
+                        <Link to='/category/espejos' className="menu-btn" onClick={() => setIsShown(false)}>Espejos</Link>
+                        <Link to='/category/marcos' className="menu-btn" onClick={() => setIsShown(false)}>Marcos</Link>
+                        <Link to='/category/plantas' className="menu-btn" onClick={() => setIsShown(false)}>Plantas</Link>
+                        <Link to='/' className="menu-btn" onClick={() => setIsShown(false)}>Ver Todo</Link>
+                        <button className="menu-btn" onClick={() => setIsShown(false)}><img className="nav-bar-close-icon" src="/assets/cruz.svg" alt="cerrar"></img></button>
                     </div>
                 )}
             </div>

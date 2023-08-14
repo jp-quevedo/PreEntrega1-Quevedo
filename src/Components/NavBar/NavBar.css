@@ -1,5 +1,4 @@
 .nav-bar {
-    overflow: hidden;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -9,7 +8,6 @@
 
 .logo {
     display: block;
-    padding-right: 1em;
     margin-bottom: 0px;
     text-decoration: none;
     color: rgb(35, 35, 35);

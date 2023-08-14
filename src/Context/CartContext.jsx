@@ -11,7 +11,7 @@ export const CartProvider = ({ children }) => {
             setCart([...cart, {...item, quantity}])
         } else {
             const newCart = [...cart];
-            const indexUpdate = cart.findIndex((item) => item.id === item.id);
+            const indexUpdate = cart.findIndex((element) => element.id === item.id);
             newCart[indexUpdate].quantity += quantity;
             setCart(newCart);
         }

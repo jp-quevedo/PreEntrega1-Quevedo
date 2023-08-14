@@ -31,7 +31,7 @@ function OrderConfirmation() {
             </table>
             {orderData.items.map((item) => {
               return (
-                <div key={item}>
+                <div key={item.id}>
                   <table className="table">
                     <tbody>
                       <tr>

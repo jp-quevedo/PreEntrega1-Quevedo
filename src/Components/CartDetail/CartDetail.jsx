@@ -25,7 +25,7 @@ const CartDetail = () => {
             </div>
             <div>
                 {cart.map((item) => (
-                    <div key={item}>
+                    <div key={item.id}>
                         <table className="table">
                             <tbody>
                                 <tr>

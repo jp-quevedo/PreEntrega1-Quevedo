@@ -23,6 +23,7 @@ function NavBar(){
                         <Link to='/category/marcos' className="btn" onClick={() => setIsShown(false)}>Marcos</Link>
                         <Link to='/category/plantas' className="btn" onClick={() => setIsShown(false)}>Plantas</Link>
                         <Link to='/' className="btn" onClick={() => setIsShown(false)}>Ver Todo</Link>
+                        <button className="btn" onClick={() => setIsShown(false)}><img className="nav-bar-icon" src="/assets/cruz.svg" alt="cerrar"></img></button>
                     </div>
                 )}
             </div>

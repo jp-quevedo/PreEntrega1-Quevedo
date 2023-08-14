@@ -10,68 +10,37 @@ const CartDetail = () => {
         <div className="box-container">
             <div>
                 <h2>Bolsa de compras</h2>
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th className="table-title">Nombre</th>
-                            <th className="table-title">Precio Unitario</th>
-                            <th className="table-title">Cantidad Agregada</th>
-                            <th className="table-title">Precio Total</th>
-                            <th className="table-title">Eliminar</th>
-                        </tr>
-                    </thead>
-                </table>
-                <hr/>
             </div>
             <div>
                 {cart.map((item) => (
-                    <div key={item.id}>
-                        <table className="table">
-                            <tbody>
-                                <tr>
-                                    <th><p className="detail-cart-text">{item.name}</p></th>
-                                    <th><p className="detail-cart-text">${item.price}</p></th>
-                                    <th><p className="detail-cart-text">{item.quantity}</p></th>
-                                    <th><p className="detail-cart-text">${item.price * item.quantity}</p></th>
-                                    <th><button onClick={() => removeItem(item.id)} className="remove-item">
-                                        <img className="remove-icon" src="/assets/basura.svg" alt="eliminar"></img></button>
-                                    </th>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <hr/>
+                    <div key={item.id} className="cart-item-container">
+                        <p className="detail-cart-text">{item.name}</p>
+                        <p className="detail-cart-text">{item.quantity} unidad(es)</p>
+                        <p className="detail-cart-text">${item.price}</p>
+                        <p className="detail-cart-text">${item.price * item.quantity}</p>
+                        <div className="remove-item-container">
+                            <button className="remove-item"
+                                onClick={() => removeItem(item.id)}>
+                                <img className="remove-icon" src="/assets/basura.svg" alt="eliminar"></img>
+                            </button>
+                        </div> 
                     </div>
+
                 ))}
-                    <table className="table">
-                        <tfoot>
-                            <tr>
-                                <th>
-                                    <p className="total-cart-text">Subtotal:</p>
-                                </th>
-                                <th>
-                                    <p className="total-cart-text">${getTotalPriceInCart()}</p>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <p className="total-cart-text">Costo de Envío:</p>
-                                </th>
-                                <th>
-                                    <p className="total-cart-text">${getTotalShipping().toFixed(0)}</p>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <p className="total-cart-text">Total de la Compra:</p>
-                                </th>
-                                <th>
-                                    <p className="total-cart-text">${orderTotal().toFixed(0)}</p>
-                                </th>
-                            </tr>
-                        </tfoot>
-                    </table>              
+                    <div className="total-item-container">
+                        <p className="total-cart-text">Subtotal:</p>                               
+                        <p className="detail-cart-text">${getTotalPriceInCart()}</p>
+                    </div>              
+                    <div className="total-item-container">
+                        <p className="total-cart-text">Costo de Envío:</p>                               
+                        <p className="detail-cart-text">${getTotalShipping().toFixed(0)}</p>
+                    </div>              
+                    <div className="total-item-container">
+                        <p className="total-cart-text">Total de la Compra:</p>                                
+                        <p className="detail-cart-text">${orderTotal().toFixed(0)}</p>
+                    </div>              
                 </div>
-            <div>
+            <div className="checkout-options">
                 <Link to='/checkout' className="checkout-btn">Confirmar Compra</Link>
                 <Link to='/' className="checkout-btn">Seguir Comprando</Link>
                 <div className="remove-cart"><button onClick={() => clearCart()} className="remove-cart-btn">Vaciar Bolsa</button></div>

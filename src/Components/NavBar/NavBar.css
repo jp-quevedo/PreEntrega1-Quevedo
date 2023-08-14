@@ -12,6 +12,29 @@
     text-decoration: none;
     color: rgb(35, 35, 35);
     font-size: large;
+    padding: 0px 30px;
+}
+
+.menu-btn {
+    padding: 0px 15px;
+    margin: 0px 15px;
+    color: rgb(35, 35, 35);
+    cursor: pointer;
+    text-decoration: none;
+    border: 0px;
+}
+
+.nav-bar-icon {
+    width: 25px;
+    vertical-align: baseline;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn {
@@ -20,6 +43,7 @@
     color: rgb(35, 35, 35);
     cursor: pointer;
     text-decoration: none;
+    border: 0px;
 }
 
 .btn:hover {
@@ -28,4 +52,14 @@
 
 .btn:active {
     color: rgb(35, 35, 35);
+}
+
+@media (max-width: 425px) {
+    .menu-items {
+        display: flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 }

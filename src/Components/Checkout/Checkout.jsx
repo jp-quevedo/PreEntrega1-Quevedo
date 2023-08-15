@@ -31,7 +31,7 @@ function Checkout() {
             Swal.fire({
                 position: 'center',
                 icon: 'success',
-                title: 'Excelent!',
+                title: 'Excellent!',
                 text: 'Order generated',
                 showConfirmButton: false,
                 timer: 1500,

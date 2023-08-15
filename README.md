@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Clever Décor - an ecommerce mockup built with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hey everyone! My name is Juan Pablo Quevedo and this is my final project for the React Js course in Coderhouse.
 
-## Available Scripts
+Clever Décor is an ecommerce mockup based on a decoration store.
 
-In the project directory, you can run:
+## SPA built in entirely with React Js and Firestore:
 
-### `npm start`
+* Transpilling
+* Components
+* Promises
+* Asyncrony
+* MAP
+* API Comsumption
+* Routing
+* Events
+* Context
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Libraries used: Sweet Alert 2.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Styled with plain CSS.
 
-### `npm test`
+## How to use:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-### `npm run build`
+```bash
+# Clone this repository
+$ git clone https://github.com/jp-quevedo/react-project-coderhouse.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Go into the repository
+$ cd react-project-coderhouse
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Install dependencies
+$ npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Run the app
+$ npm start
+```
 
-### `npm run eject`
+You can also try it at: https://react-project-coderhouse.vercel.app/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Preview Screenshots:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Imgur](https://i.imgur.com/NhCq3rs.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Imgur](https://i.imgur.com/2LjHxSY.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Imgur](https://i.imgur.com/0mJyp62.png)
 
-## Learn More
+![Imgur](https://i.imgur.com/RYtG9ar.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Imgur](https://i.imgur.com/qbkuEcj.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Imgur](https://i.imgur.com/STrafff.png)
 
-### Code Splitting
+![Imgur](https://i.imgur.com/3eTQPkg.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Imgur](https://i.imgur.com/KGovpVs.png)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Imgur](https://i.imgur.com/twSI4su.png)

@@ -6,7 +6,7 @@ function About() {
                 Hey everyone! My name is Juan Pablo Quevedo and this is my final project for the React Js course in Coderhouse.
             </p>
             <p className="detail-card-text">
-                Clever Décor is an ecommerce mockup based on a decoration store.
+                Clever Décor is an e-commerce mockup based on a decoration store.
             </p>
             <p className="detail-card-text">
                 SPA built in entirely with React Js and Firestore:
@@ -34,9 +34,6 @@ function About() {
             </p>
             <p className="detail-card-text">
                 Business Inquiries: quevedo.jpg@gmail.com
-            </p>
-            <p className="detail-card-text">
-                Thank you for reading.
             </p>
         </div>
     )

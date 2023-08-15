@@ -1,8 +1,8 @@
-# Clever Décor - an ecommerce mockup built with React
+# Clever Décor - an e-commerce mockup built with React
 
 Hey everyone! My name is Juan Pablo Quevedo and this is my final project for the React Js course in Coderhouse.
 
-Clever Décor is an ecommerce mockup based on a decoration store.
+Clever Décor is an e-commerce mockup based on a decoration store.
 
 ## SPA built in entirely with React Js and Firestore:
 
@@ -40,7 +40,7 @@ $ npm start
 
 You can also try it at: https://react-project-coderhouse.vercel.app/
 
-## Preview Screenshots:
+## Preview screenshots:
 
 ![Imgur](https://i.imgur.com/NhCq3rs.png)
 

@@ -60,4 +60,4 @@ You can also try it at: https://react-project-coderhouse.vercel.app/
 
 ![Imgur](https://i.imgur.com/KGovpVs.png)
 
-![Imgur](https://i.imgur.com/8U6M481.png)
+![Imgur](https://i.imgur.com/54HbovK.png)

@@ -9,6 +9,9 @@ function About() {
                 Clever Décor is an e-commerce mockup based on a decoration store.
             </p>
             <p className="detail-card-text">
+                Full responsive web design.
+            </p>
+            <p className="detail-card-text">
                 SPA built in entirely with React Js and Firestore:
             </p>
             <p className="detail-card-text">Transpilling</p>

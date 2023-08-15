@@ -4,6 +4,8 @@ Hey everyone! My name is Juan Pablo Quevedo and this is my final project for the
 
 Clever Décor is an e-commerce mockup based on a decoration store.
 
+Full responsive web design.
+
 ## SPA built in entirely with React Js and Firestore:
 
 * Transpilling

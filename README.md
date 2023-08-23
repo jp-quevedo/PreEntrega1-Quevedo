@@ -54,7 +54,7 @@ You can also try it at: https://react-project-coderhouse.vercel.app/
 
 ![Imgur](https://i.imgur.com/qbkuEcj.png)
 
-![Imgur](https://i.imgur.com/STrafff.png)
+![Imgur](https://i.imgur.com/fGjRQ17.png)
 
 ![Imgur](https://i.imgur.com/3eTQPkg.png)
 

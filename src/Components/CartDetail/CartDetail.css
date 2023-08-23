@@ -11,6 +11,26 @@
     padding-bottom: 16px;
 }
 
+.incart-selectors {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0px 5px;
+    color: rgb(35, 35, 35);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+}
+
+.incart-selectors:hover {
+    text-decoration: none;
+}
+
+.incart-selectors:active {
+    color: rgb(35, 35, 35);
+}
+
 .total-item-container {
     display: flex;
     flex-direction: row;

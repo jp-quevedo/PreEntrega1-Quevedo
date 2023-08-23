@@ -26,6 +26,15 @@ export const CartProvider = ({ children }) => {
         setCart([...cart])
     }
 
+    const subtractInCart = itemId => {
+        cart.forEach(item => {
+            if (item.id === itemId && item.quantity > 1){
+                item.quantity === 1 ? item.quantity = 1 : item.quantity -=1;
+            }
+        })
+        setCart([...cart])
+    }
+
     const removeItem = (itemId) => {
         Swal.fire({
             title: 'Are you sure?',
@@ -137,7 +146,8 @@ export const CartProvider = ({ children }) => {
                 getItemInCart,
                 postOrderCart,
                 orderTotal,
-                addInCart             
+                addInCart,
+                subtractInCart         
             }}>
             { children }
         </cartContext.Provider>

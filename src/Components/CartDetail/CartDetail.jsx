@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 const CartDetail = () => {
-    const { cart, removeItem, clearCart, getTotalPriceInCart, getTotalShipping, orderTotal, addInCart } = useContext(cartContext)
+    const { cart, removeItem, clearCart, getTotalPriceInCart, getTotalShipping, orderTotal, addInCart, subtractInCart } = useContext(cartContext)
 
 
     return (
@@ -16,8 +16,11 @@ const CartDetail = () => {
                 {cart.map((item) => (
                     <div key={item.id} className="cart-item-container">
                         <p className="detail-cart-text">{item.name}</p>
-                        <p className="detail-cart-text">{item.quantity} unit(s)</p>
-                        <button className="selectors" onClick={addInCart(item.id)}>+</button>
+                        <p className="detail-cart-text">
+                            <button className="incart-selectors" onClick={() => subtractInCart(item.id)}>-</button>
+                            {item.quantity} unit(s)
+                            <button className="incart-selectors" onClick={() => addInCart(item.id)}>+</button>
+                        </p>
                         <p className="detail-cart-text">CLP ${item.price}</p>
                         <p className="detail-cart-text">CLP ${item.price * item.quantity}</p>
                         <div className="remove-item-container">

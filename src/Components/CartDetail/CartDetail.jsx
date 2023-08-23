@@ -17,7 +17,7 @@ const CartDetail = () => {
                     <div key={item.id} className="cart-item-container">
                         <p className="detail-cart-text">{item.name}</p>
                         <p className="detail-cart-text">{item.quantity} unit(s)</p>
-                        <button className="selectors" onClick={addInCart}>+</button>
+                        <button className="selectors" onClick={addInCart(item.id)}>+</button>
                         <p className="detail-cart-text">CLP ${item.price}</p>
                         <p className="detail-cart-text">CLP ${item.price * item.quantity}</p>
                         <div className="remove-item-container">

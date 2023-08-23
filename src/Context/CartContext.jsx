@@ -19,11 +19,11 @@ export const CartProvider = ({ children }) => {
 
     const addInCart = itemId => {
         cart.forEach(item => {
-            if (item.id === itemId){
+            if (item.id === itemId && item.quantity < item.stock){
                 item.quantity +=1;
             }
-            setCart([...cart])
         })
+        setCart([...cart])
     }
 
     const removeItem = (itemId) => {

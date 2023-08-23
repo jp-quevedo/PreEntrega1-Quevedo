@@ -17,6 +17,15 @@ export const CartProvider = ({ children }) => {
         }
     }
 
+    const addInCart = itemId => {
+        cart.forEach(item => {
+            if (item.id === itemId){
+                item.quantity +=1;
+            }
+            setCart([...cart])
+        })
+    }
+
     const removeItem = (itemId) => {
         Swal.fire({
             title: 'Are you sure?',
@@ -100,7 +109,7 @@ export const CartProvider = ({ children }) => {
             total = 0;
         }
         else {
-            total = getTotalPriceInCart() * 0.05;
+            total = getTotalPriceInCart() * 0.15;
         }
         return total;
     }
@@ -112,7 +121,7 @@ export const CartProvider = ({ children }) => {
 
     function getItemInCart(id) {
         return cart.find((item) => item.id === id);
-      }
+    }
 
     return (
         <cartContext.Provider
@@ -127,7 +136,8 @@ export const CartProvider = ({ children }) => {
                 getTotalShipping,
                 getItemInCart,
                 postOrderCart,
-                orderTotal
+                orderTotal,
+                addInCart             
             }}>
             { children }
         </cartContext.Provider>

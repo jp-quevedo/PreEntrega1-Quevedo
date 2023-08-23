@@ -19,6 +19,7 @@
     width: 25px;
     height: 25px;
     border-radius: 5px;
+    color: rgb(35, 35, 35);
     border-color: rgb(234, 238, 234);
     cursor: pointer;
     text-decoration: none;
@@ -37,6 +38,7 @@
     width: 180px;
     font-size: 1.25em;
     border-radius: 5px;
+    color: rgb(35, 35, 35);
     border-color: rgb(234, 238, 234);
     cursor: pointer;
     text-decoration: none;

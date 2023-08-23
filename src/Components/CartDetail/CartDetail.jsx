@@ -4,7 +4,8 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 const CartDetail = () => {
-    const { cart, removeItem, clearCart, getTotalPriceInCart, getTotalShipping, orderTotal } = useContext(cartContext)
+    const { cart, removeItem, clearCart, getTotalPriceInCart, getTotalShipping, orderTotal, addInCart } = useContext(cartContext)
+
 
     return (
         <div className="box-container">
@@ -16,6 +17,7 @@ const CartDetail = () => {
                     <div key={item.id} className="cart-item-container">
                         <p className="detail-cart-text">{item.name}</p>
                         <p className="detail-cart-text">{item.quantity} unit(s)</p>
+                        <button className="selectors" onClick={addInCart}>+</button>
                         <p className="detail-cart-text">CLP ${item.price}</p>
                         <p className="detail-cart-text">CLP ${item.price * item.quantity}</p>
                         <div className="remove-item-container">
@@ -23,7 +25,7 @@ const CartDetail = () => {
                                 onClick={() => removeItem(item.id)}>
                                 <img className="remove-icon" src="/assets/basura.svg" alt="eliminar"></img>
                             </button>
-                        </div> 
+                        </div>
                     </div>
 
                 ))}
